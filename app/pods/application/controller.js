@@ -7,15 +7,23 @@ import { inject as service } from '@ember/service';
 import { isBlank } from '@ember/utils';
 
 import md5 from 'md5';
+import { validator, buildValidations } from 'ember-cp-validations';
 
 const ObjectPromiseProxy = ObjectProxy.extend(PromiseProxyMixin);
+const Validations = buildValidations({
+  email: [
+    validator('presence', true),
+    validator('format', { type: 'email' })
+  ]
+});
 
-export default Controller.extend({
+export default Controller.extend(Validations, {
   fingerprintjs: service(),
   firebase: service(),
   metrics: service(),
   router: service(),
 
+  email: '',
   fingerprint: null, // n.b. set on init
   canNudgeUser: false,
   isSubscriber: computed('fingerprintjs.fingerprint.result', isSubscriber),

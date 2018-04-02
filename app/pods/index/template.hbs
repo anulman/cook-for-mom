@@ -1,21 +1,31 @@
 {{index/hero-header
-  email=email
-  validations=validations
+  email=application.email
+  validations=application.validations
   didSubmit=(readonly application.didSubmit)
-  onInput=(action (mut email))
-  onSubmit=(action application.onEmailSubmitted application email 'hero')
+  onInput=(action (mut application.email))
+  onSubmit=(action application.onEmailSubmitted application application.email 'hero')
   onFormVisibilityChange=(action (mut isHeroFormShowing))}}
 
-{{index/nav-bar
-  email=email
-  validations=validations
-  isButtonVisible=(not isHeroFormShowing)
-  isNudging=(readonly application.isNudging)
-  didSubmit=(readonly application.didSubmit)
-  onInput=(action (mut email))
-  onSubmit=(action application.onEmailSubmitted application email 'nav')
-  requestNudgeFor=(action application.requestNudgeFor application 'navbar')
-  cancelNudge=(action (mut application.isNudging) false)}}
+{{#nav-bar
+  exitIntent=(action application.requestNudgeFor application 'navbar' 'exit-hover') as |nav|}}
+  {{#nav.items as |items|}}
+    {{items.item 'Menu' '#menu'}}
+    {{items.item 'Six Free Lessons' '#six-free-lessons'}}
+    {{items.item 'Why Is This Free?' '#why-is-this-free'}}
+    {{items.item 'About Us' '#about-us'}}
+  {{/nav.items}}
+
+  {{#unless isHeroFormShowing}}
+    {{nav-bar/signup-cta
+      email=application.email
+      validations=application.validations
+      didSubmit=application.didSubmit
+      isNudging=application.isNudging
+      onInput=(action (mut application.email))
+      onSubmit=(action application.onEmailSubmitted application application.email 'nav')
+      cancelNudge=(action (mut application.isNudging) false)}}
+  {{/unless}}
+{{/nav-bar}}
 
 {{#parallax-container as |parallax|}}
   {{parallax.background class='potatoes'}}
