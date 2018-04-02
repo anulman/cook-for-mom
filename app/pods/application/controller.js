@@ -4,7 +4,7 @@ import PromiseProxyMixin from '@ember/object/promise-proxy-mixin';
 
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
-import { isBlank, isPresent } from '@ember/utils';
+import { isBlank } from '@ember/utils';
 
 import md5 from 'md5';
 
