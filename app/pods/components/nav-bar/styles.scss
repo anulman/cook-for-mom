@@ -9,7 +9,7 @@
 }
 
 .nav-wrapper {
-  height: 3.5rem;
+  height: $nav-height;
   max-width: 100vw;
 
   overflow-y: hidden;
@@ -113,5 +113,31 @@ aside .tooltip {
     position: absolute;
     top: 0.5rem;
     right: -4.2rem;
+  }
+}
+
+.nav-item .dropdown-menu {
+  background-color: initial;
+  border: none;
+
+  .dropdown-item {
+    &:hover {
+      background-color: initial;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      background-color: initial;
+    }
+
+    &:active {
+      font-style: italic;
+      color: initial;
+    }
+
+    &[disabled] {
+      color: transparentize($body-color, 0.75);
+      cursor: not-allowed;
+    }
   }
 }
