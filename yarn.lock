@@ -2897,6 +2897,10 @@ dotenv@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-1.2.0.tgz#7cd73e16e07f057c8072147a5bc3a8677f0ab5c6"
 
+dotenv@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
+
 duplexer2@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.1.4.tgz#8b12dab878c0d69e3e7891051662a32fc6bddcc1"
@@ -7635,6 +7639,10 @@ promise-map-series@^0.2.1:
   dependencies:
     rsvp "^3.0.14"
 
+"promise-nodeify@>= 0.1":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/promise-nodeify/-/promise-nodeify-2.0.0.tgz#14055f438cddc31c89775a132a06888b74e180b5"
+
 promise-polyfill@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-7.1.0.tgz#4d749485b44577c14137591c6f36e5d7e2dd3378"
@@ -7676,6 +7684,10 @@ proxy-addr@~2.0.2:
   dependencies:
     forwarded "~0.1.2"
     ipaddr.js "1.6.0"
+
+"proxying-agent@>= 2.1":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/proxying-agent/-/proxying-agent-2.1.2.tgz#bd66b5f0f967725e31c0f1b38a594c622f55fd26"
 
 pseudomap@^1.0.2:
   version "1.0.2"
@@ -9098,6 +9110,13 @@ timed-out@^3.0.0:
 timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
+
+tinify@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/tinify/-/tinify-1.5.0.tgz#6ba2ea7e8827c845d263de3b46f4db7bad555920"
+  dependencies:
+    promise-nodeify ">= 0.1"
+    proxying-agent ">= 2.1"
 
 tiny-lr@^1.0.3:
   version "1.1.0"
