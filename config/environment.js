@@ -6,7 +6,9 @@ module.exports = function(environment) {
     podModulePrefix: 'cook-for-mom/pods',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'router-scroll',
+    historySupportMiddleware: true,
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -57,6 +59,10 @@ module.exports = function(environment) {
       projectId: "cook-for-mom",
       storageBucket: "cook-for-mom.appspot.com",
       messagingSenderId: "52666927436"
+    },
+
+    routerScroll: {
+      scrollElement: '#ember-application'
     }
   };
 
