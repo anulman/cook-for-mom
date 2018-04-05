@@ -45,3 +45,11 @@ button:focus {
     }
   }
 }
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * (var(--nav-height) + 1rem));
+
+  visibility: hidden;
+}
