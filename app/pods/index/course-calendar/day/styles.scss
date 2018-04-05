@@ -1,0 +1,41 @@
+& {
+  @include border-radius(.5rem);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: lighten($color-gainsboro, 5%);
+  box-shadow: 1px 1px 2px $color-rosy-brown;
+}
+
+&.today {
+  background: $primary;
+  color: lighten($color-gainsboro, 10%);
+}
+
+&.lesson {
+  background: $color-sienna;
+  color: lighten($color-gainsboro, 10%);
+}
+
+&.activity-1 {
+  background: linear-gradient(to top left, lighten($color-gainsboro, 5%) 0%, lighten($color-gainsboro, 5%) 50%, $color-khaki 50%, $color-khaki 100%);
+}
+
+&.activity-2 {
+  background: $color-khaki;
+}
+
+&.meal {
+  background-image: url('/assets/images/icons/calendar-star.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tooltip {
+  min-width: 150px;
+}

@@ -1,0 +1,13 @@
+{{#section-info class=styleNamespace as |info|}}
+  {{yield (hash
+    info=info
+    schedule=schedule
+    nav=(hash
+      center=center
+      class=(if isAtEarliestMonth 'cal-start' (if isAtLatestMonth 'cal-end'))
+    )
+    activate=(action activate)
+    deactivate=(action deactivate)
+    day=(component dayComponent)
+  )}}
+{{/section-info}}

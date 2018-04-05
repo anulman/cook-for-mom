@@ -1,0 +1,9 @@
+{{#section-info class=styleNamespace
+  onScrollOutBottom=(action onScrollOutBottom) as |info|}}
+  {{yield (hash
+    info=info
+    dishes=dishes
+    activate=(action activate)
+    deactivate=(action deactivate)
+  )}}
+{{/section-info}}

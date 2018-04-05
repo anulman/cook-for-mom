@@ -1,0 +1,114 @@
+.ember-power-calendar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  > nav {
+    font-family: $font-family-heading;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+    align-items: flex-start;
+
+    &.cal-start .ember-power-calendar-nav-control--previous,
+    &.cal-end .ember-power-calendar-nav-control--next {
+      visibility: hidden;
+    }
+  }
+
+  > div {
+    @include border-radius(1rem);
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    background: lighten($color-rosy-brown, 10%);
+    padding: 1rem;
+  }
+
+  button, button:focus, button:active {
+    outline: none;
+  }
+}
+
+.ember-power-calendar-nav-control {
+  transform: scale(1);
+  font-weight: 300;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+
+    cursor: pointer;
+  }
+}
+
+.ember-power-calendar-weekdays {
+  color: $dark;
+
+  font-family: $font-family-heading;
+  margin-bottom: .5rem;
+}
+
+.ember-power-calendar-day-grid {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  > * {
+    min-height: 3rem;
+    flex: 1;
+
+    > * {
+      margin: 0.25rem;
+    }
+  }
+
+  // todo: resolve non-blocking style issue when navigating back & forward months on ios
+  button {
+    position: relative;
+    opacity: 1;
+
+    color: $dark;
+
+    &[disabled] > *, &.ember-power-calendar-day--other-month > * {
+      opacity: 0.4;
+    }
+
+    &[disabled] {
+      color: lighten($dark, 20%);
+      font-style: italic;
+
+      > * {
+        background: none !important;
+      }
+    }
+  }
+
+  button:not([disabled]) {
+    > * {
+      transition: transform 0.2s, opacity 0.2s;
+      transform: scale(1);
+    }
+
+    &:hover > *, > .sim-hover {
+      transform: scale(1.25);
+      z-index: 1;
+
+      cursor: pointer;
+    }
+  }
+
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+a {
+  color: $body-color;
+}

@@ -7,10 +7,20 @@
   onFormVisibilityChange=(action (mut isHeroFormShowing))}}
 
 {{#nav-bar
+  isFollowingAnchors=true
   exitIntent=(action application.requestNudgeFor application 'navbar' 'exit-hover') as |nav|}}
   {{#nav.items as |items|}}
     {{items.item 'Menu' '#menu'}}
-    {{items.item 'Six Free Lessons' '#six-free-lessons'}}
+    {{#items.item 'Six Free Lessons' '#six-free-lessons'}}
+      {{#bs-tooltip class='dropdown-menu'}}
+        {{link-to 'Week 1: Knife Skills' 'lessons.knife-skills' class='dropdown-item'}}
+        <a class='dropdown-item' disabled> Week 2: Cooking Proteins </a>
+        <a class='dropdown-item' disabled> Week 3: How to Shop </a>
+        <a class='dropdown-item' disabled> Week 4: The Continuous Kitchen </a>
+        <a class='dropdown-item' disabled> Week 5: Timing </a>
+        <a class='dropdown-item' disabled> Week 6: Meal Prep </a>
+      {{/bs-tooltip}}
+    {{/items.item}}
     {{items.item 'Why Is This Free?' '#why-is-this-free'}}
     {{items.item 'About Us' '#about-us'}}
   {{/nav.items}}
@@ -41,16 +51,16 @@
   {{/parallax.fluid}}
 {{/parallax-container}}
 
-{{#index/section-info
-  onScrollOutBottom=(action (mut application.canNudgeUser) true) as |info|}}
+{{#index/meal-menu
+  onScrollOutBottom=(action (mut application.canNudgeUser) true) as |menu|}}
   <a class='anchor' id='menu' />
-  {{#info.title}} Menu {{/info.title}}
-  {{#info.lead}} Impress Mom with this deceptively simple 3-course, gourmet meal: {{/info.lead}}
+  {{#menu.info.title}} Menu {{/menu.info.title}}
+  {{#menu.info.lead}} Impress Mom with this deceptively simple 3-course, gourmet meal: {{/menu.info.lead}}
 
-  {{#meal-menu class='row' as |menu|}}
+  <div class='row'>
     <div class='col-md-7 p-relative d-flex flex-column'>
       {{#each menu.dishes as |dish|}}
-        {{#info.lead tagName='h4' class='text-center d-md-none'}} {{capitalize dish.slug}} {{/info.lead}}
+        {{#menu.info.lead tagName='h4' class='text-center d-md-none'}} {{capitalize dish.slug}} {{/menu.info.lead}}
         <div class='card {{dish.slug}} {{if dish.active 'sim-hover'}}'
           onmouseover={{action menu.activate dish}}
           onmouseout={{action menu.deactivate dish}}>
@@ -62,7 +72,7 @@
       {{/each}}
     </div>
 
-    {{#info.content tagName='ul' class='col-md-5 d-none d-md-flex flex-column justify-content-between'}}
+    {{#menu.info.content tagName='ul' class='col-md-5 d-none d-md-flex flex-column justify-content-between'}}
       {{#each menu.dishes as |dish|}}
         <li class='i-{{dish.slug}} {{if dish.active 'sim-hover'}}'
           onmouseover={{action menu.activate dish}}
@@ -70,9 +80,9 @@
           {{dish.description}}
         </li>
       {{/each}}
-    {{/info.content}}
-  {{/meal-menu}}
-{{/index/section-info}}
+    {{/menu.info.content}}
+  </div>
+{{/index/meal-menu}}
 
 {{#parallax-container as |parallax|}}
   {{parallax.background class='soup'}}
@@ -88,42 +98,50 @@
   {{/parallax.fluid}}
 {{/parallax-container}}
 
-{{#index/section-info as |info|}}
+{{#index/course-calendar as |calendar|}}
   <a class='anchor' id='six-free-lessons' />
-  {{#info.title}} Six Free Lessons {{/info.title}}
+  {{#calendar.info.title}} Six Free Lessons {{/calendar.info.title}}
 
-  {{#course-calendar class='row' as |calendar|}}
+  <div class='row'>
     <div class='col-md-6'>
-      {{#info.lead}} Starting April 2, we will send you new lesson content every week, covering topics such as: {{/info.lead}}
-      {{#info.content tagName='ul'}}
-        {{#each calendar.lessons as |lesson|}}
+      {{#calendar.info.lead}} Starting April 2, we will send you new lesson content every week, covering topics such as: {{/calendar.info.lead}}
+      {{#calendar.info.content tagName='ul'}}
+        {{#each calendar.schedule.lessons as |lesson|}}
           <li class='i-{{lesson.slug}} {{if lesson.active 'sim-hover'}}'
             onmouseover={{action calendar.activate lesson}}
             onmouseout={{action calendar.deactivate lesson}}>
-            {{lesson.description}}
+            {{#if (is-same-or-after lesson.date precision='day')}}
+              {{link-to (html-safe lesson.description) (concat 'lessons.' lesson.slug)}}
+            {{else}}
+              {{html-safe lesson.description}}
+            {{/if}}
           </li>
         {{/each}}
-      {{/info.content}}
+
+        <li class='i-learning'>
+          And much, much more!
+        </li>
+      {{/calendar.info.content}}
     </div>
 
     <div class='col-md-6 col-lg-5 offset-lg-1 d-flex flex-column mt-3 mt-md-0'>
       {{#power-calendar
-        center=calendar.center
-        onCenterChange=(action (mut calendar.center) value='date')as |power|}}
-        {{power.nav}}
+        center=calendar.nav.center
+        onCenterChange=(action (mut calendar.nav.center) value='date') as |power|}}
+        {{power.nav class=calendar.nav.class}}
         {{#power.days
           startOfWeek=1
-          minDate=calendar.min
-          maxDate=calendar.max
-          dayIsDisabled=calendar.dayIsDisabled as |day|}}
-          {{course-calendar/day calendar day
+          minDate=calendar.schedule.minDate
+          maxDate=calendar.schedule.maxDate
+          dayIsDisabled=calendar.schedule.isDayDisabled as |day|}}
+          {{index/course-calendar/day calendar day
             didSubmit=(readonly application.didSubmit)
             nudgeSignup=(action application.nudge application 'calendar' 'click-today')}}
         {{/power.days}}
       {{/power-calendar}}
     </div>
-  {{/course-calendar}}
-{{/index/section-info}}
+  </div>
+{{/index/course-calendar}}
 
 {{#parallax-container as |parallax|}}
   {{parallax.background class='tacos'}}
@@ -139,7 +157,7 @@
   {{/parallax.fluid}}
 {{/parallax-container}}
 
-{{#index/section-info
+{{#section-info
   onScrollOutBottom=(action application.requestNudgeFor application 'why-is-this-free' 'didScrollPast') as |info|}}
   <a class='anchor' id='why-is-this-free' />
   {{#info.title}} Why Is This Free? {{/info.title}}
@@ -161,7 +179,7 @@
       {{/info.content}}
     </div>
   </div>
-{{/index/section-info}}
+{{/section-info}}
 
 {{#parallax-container as |parallax|}}
   {{parallax.background class='cookies'}}
@@ -219,7 +237,7 @@
   {{/parallax.fluid}}
 {{/parallax-container}}
 
-{{#index/section-info as |info|}}
+{{#section-info as |info|}}
   <a class='anchor' id='about-us' />
   {{#info.title}} About Us {{/info.title}}
 
@@ -246,7 +264,7 @@
       {{/info.content}}
     </div>
   </div>
-{{/index/section-info}}
+{{/section-info}}
 
 {{#parallax-container as |parallax|}}
   {{parallax.background class='heart'}}
