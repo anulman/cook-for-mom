@@ -1,0 +1,38 @@
+{{#nav-bar as |nav|}}
+  {{#nav.items as |items|}}
+    {{items.link-to 'Home' 'index'}}
+    {{#items.link-to 'Week 1' 'lessons.knife-skills'}}
+      {{#bs-tooltip}} Knife Skills {{/bs-tooltip}}
+    {{/items.link-to}}
+
+    {{#items.item 'Week 2' disabled=true}}
+      {{#bs-tooltip}} Cooking Proteins {{/bs-tooltip}}
+    {{/items.item}}
+
+    {{#items.item 'Week 3' disabled=true}}
+      {{#bs-tooltip}} How to Shop {{/bs-tooltip}}
+    {{/items.item}}
+
+    {{#items.item 'Week 4' disabled=true}}
+      {{#bs-tooltip}} The Continuous Kitchen {{/bs-tooltip}}
+    {{/items.item}}
+
+    {{#items.item 'Week 5' disabled=true}}
+      {{#bs-tooltip}} Timing {{/bs-tooltip}}
+    {{/items.item}}
+
+    {{#items.item 'Week 6' disabled=true}}
+      {{#bs-tooltip}} Meal Prep {{/bs-tooltip}}
+    {{/items.item}}
+  {{/nav.items}}
+
+  {{nav-bar/signup-cta
+    email=application.email
+    isNudging=application.isNudging
+    validations=application.validations
+    didSubmit=application.didSubmit
+    onInput=(action (mut application.email))
+    onSubmit=(action application.onEmailSubmitted application application.email 'nav')}}
+{{/nav-bar}}
+
+{{outlet}}
