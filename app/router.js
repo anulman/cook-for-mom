@@ -22,6 +22,9 @@ const Router = EmberRouter.extend(RouterScroll, {
 });
 
 Router.map(function() {
+  this.route('lessons', function() {
+    this.route('knife-skills');
+  });
 });
 
 export default Router;
