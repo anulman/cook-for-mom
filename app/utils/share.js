@@ -8,8 +8,7 @@ export default function share(platform) {
       return open('https://www.facebook.com/v2.12/dialog/share', {
         app_id: FACEBOOK_APP_ID,
         display: 'popup',
-        href: 'https://cookformom.com',
-        quote: `I'm learning to cook a 3-course gourmet meal that will impress mom this Mother's Day. Come join me at https://cookformom.com!` // eslint-disable-line max-len
+        href: `https://cookformom.com${window.location.pathname}`
       });
   }
 }
