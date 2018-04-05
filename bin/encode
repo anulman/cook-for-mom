@@ -3,52 +3,40 @@
 const child_process = require('child_process');
 const fs = require('fs-extra');
 const path = require('path');
+
+const debug = require('debug')('encode');
 const glob = require('glob');
 const program = require('commander');
+const tinify = require('tinify');
+
+require('dotenv').config();
+tinify.key = process.env.TINYPNG_KEY;
 
 program
   .option('-f --force', 'Force re-conversion')
-  .arguments('<path> [paths...]')
   .option('-o --output-dir [dir]', 'Output dir')
+  .option('-w --width [dir]', 'Output file width')
+  .arguments('<path> [paths...]')
   .action(function(_arg, args, options) {
+    let tasks = [];
+
     for (let arg of [_arg, ...args]) {
       for (let inputPath of glob.sync(arg)) {
         let ext = path.extname(inputPath);
-        let name = path.basename(inputPath, ext);
 
-        if (ext === '.mov') {
-          let outputDir = options.outputDir || path.dirname(inputPath);
-          let outputName = path.join(outputDir, name);
+        if (options.outputDir) {
+          fs.mkdirp(options.outputDir);
+        }
 
-          let mp4Path = `${outputName}.mp4`;
-          let webmPath = `${outputName}.webm`;
-          let posterPath = `${outputName}.png`;
-          let gifPath = `${outputName}.gif`;
-
-          fs.mkdirp(outputDir);
-
-          /* eslint-disable max-len */
-          if (!fs.existsSync(mp4Path) || options.force) {
-            runCommand(`ffmpeg -y -i ${inputPath} -vf scale=640:-1 -crf 18 -preset veryslow -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -an -sn -dn ${mp4Path}`);
-          }
-
-          if (!fs.existsSync(webmPath) || options.force) {
-            runCommand(`ffmpeg -y -i ${mp4Path} -c:v libvpx-vp9 -pass 1 -b:v 1000K -threads 1 -speed 4 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm /dev/null`);
-            runCommand(`ffmpeg -y -i ${mp4Path} -c:v libvpx-vp9 -pass 2 -b:v 1000K -threads 1 -speed 0 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm ${webmPath}`);
-          }
-
-          if (!fs.existsSync(posterPath) || options.force) {
-            runCommand(`ffmpeg -i ${mp4Path} -vframes 1 ${posterPath}`);
-          }
-
-          if (!fs.existsSync(gifPath) || options.force) {
-            let palettePath = path.join(path.dirname(inputPath), 'palette.png');
-
-            runCommand(`ffmpeg -y -i ${mp4Path} -filter_complex "fps=10,scale=640:-1:flags=lanczos,palettegen" ${palettePath}`);
-            runCommand(`ffmpeg -i ${mp4Path} -i ${palettePath} -filter_complex "fps=10,scale=640:-1:flags=lanczos[x];[x][1:v]paletteuse" ${gifPath}`);
-            fs.removeSync(palettePath);
-          }
-          /* eslint-enable max-len */
+        switch (ext) {
+          case '.jpg':
+          case '.jpeg':
+          case '.png':
+            tasks.push(encodeImage(inputPath, options));
+            break;
+          case '.mov':
+            tasks.push(encodeMov(inputPath, options));
+            break;
         }
       }
     }
@@ -57,6 +45,63 @@ program
 program.parse(process.argv);
 
 function runCommand(cmd) {
-  console.log(`running: ${cmd}`);
+  debug(`running: ${cmd}`);
   child_process.execSync(cmd);
+}
+
+function encodeImage(inputPath, options) {
+  let ext = path.extname(inputPath);
+  let name = path.basename(inputPath, ext);
+  let outputDir = options.outputDir || path.dirname(inputPath);
+
+  let tinyPath = path.join(outputDir, `${name}-tiny${ext}`);
+
+  if (!fs.existsSync(tinyPath) || options.force) {
+    let width = Number(options.width);
+    let source = tinify.fromFile(inputPath);
+    let resized = width && source.resize({ method: 'scale', width })
+
+    debug(`tinifying: ${inputPath}`);
+    source.toFile(tinyPath);
+
+    if (width) {
+      debug(`resizing: ${inputPath}`);
+      resized.toFile(path.join(outputDir, `${name}-${width}${ext}`));
+    }
+  }
+}
+
+function encodeMov(inputPath, options) {
+  let name = path.basename(inputPath, path.extname(inputPath));
+  let outputDir = options.outputDir || path.dirname(inputPath);
+  let outputName = path.join(outputDir, name);
+  let width = options.width || 640;
+
+  let mp4Path = `${outputName}.mp4`;
+  let webmPath = `${outputName}.webm`;
+  let posterPath = `${outputName}.png`;
+  let gifPath = `${outputName}.gif`;
+
+  /* eslint-disable max-len */
+  if (!fs.existsSync(mp4Path) || options.force) {
+    runCommand(`ffmpeg -y -i ${inputPath} -vf scale=${width}:-1 -crf 18 -preset veryslow -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -an -sn -dn ${mp4Path}`);
+  }
+
+  if (!fs.existsSync(webmPath) || options.force) {
+    runCommand(`ffmpeg -y -i ${mp4Path} -c:v libvpx-vp9 -pass 1 -b:v 1000K -threads 1 -speed 4 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm /dev/null`);
+    runCommand(`ffmpeg -y -i ${mp4Path} -c:v libvpx-vp9 -pass 2 -b:v 1000K -threads 1 -speed 0 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm ${webmPath}`);
+  }
+
+  if (!fs.existsSync(posterPath) || options.force) {
+    runCommand(`ffmpeg -i ${mp4Path} -vframes 1 ${posterPath}`);
+  }
+
+  if (!fs.existsSync(gifPath) || options.force) {
+    let palettePath = path.join(path.dirname(inputPath), 'palette.png');
+
+    runCommand(`ffmpeg -y -i ${mp4Path} -filter_complex "fps=10,scale=${width}:-1:flags=lanczos,palettegen" ${palettePath}`);
+    runCommand(`ffmpeg -i ${mp4Path} -i ${palettePath} -filter_complex "fps=10,scale=${width}:-1:flags=lanczos[x];[x][1:v]paletteuse" ${gifPath}`);
+    fs.removeSync(palettePath);
+  }
+  /* eslint-enable max-len */
 }
