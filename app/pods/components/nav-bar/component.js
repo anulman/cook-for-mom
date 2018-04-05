@@ -11,22 +11,25 @@ export default Component.extend({
 
   itemsComponent: 'nav-bar/items',
 
+  isFollowingAnchors: false,
   exitIntent: null, // optional fn
   _didTriggerExitIntent: false,
 
   didInsertElement() {
-    setActiveAnchor.call(this);
-    this._anchorChangeListener = bind(this, once, this, setActiveAnchor);
+    if (this.get('isFollowingAnchors')) {
+      setActiveAnchor.call(this);
+      this._anchorChangeListener = bind(this, once, this, setActiveAnchor);
 
-    window.addEventListener('scroll', this._anchorChangeListener, {
-      capture: true,
-      passive: true
-    });
+      window.addEventListener('scroll', this._anchorChangeListener, {
+        capture: true,
+        passive: true
+      });
 
-    window.addEventListener('resize', this._anchorChangeListener, {
-      capture: true,
-      passive: true
-    });
+      window.addEventListener('resize', this._anchorChangeListener, {
+        capture: true,
+        passive: true
+      });
+    }
 
     if (this.get('userAgent.browser.isFirefox')) {
       this.element.style.height = this.element.clientHeight;
