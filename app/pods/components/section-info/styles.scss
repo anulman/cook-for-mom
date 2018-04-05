@@ -1,0 +1,109 @@
+& {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: lighten($color-khaki, 20%);
+
+  min-height: 40rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  font-weight: 300;
+}
+
+a {
+  color: $body-color;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: .75rem 0 .75rem 3.5rem;
+
+    transition: transform 0.1s ease-in;
+    text-shadow: none;
+
+    &:hover, &.sim-hover {
+      text-decoration: underline;
+      cursor: pointer;
+      transform: skew(-5deg);
+    }
+  }
+
+  li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 100%;
+
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  margin-bottom: 0;
+}
+
+em {
+  font-style: normal;
+  font-weight: 400;
+}
+
+strong {
+  @extend em;
+
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+li {
+  &.i-potatoes::before {
+    background-image: url(/assets/images/icons/potatoes.png);
+  }
+
+  &.i-soup::before {
+    background-image: url(/assets/images/icons/soup.png);
+  }
+
+  &.i-tacos::before {
+    background-image: url(/assets/images/icons/tacos.png);
+  }
+
+  &.i-cookies::before {
+    background-image: url(/assets/images/icons/cookies.png);
+  }
+
+  &.i-knife-skills::before {
+    background-image: url(/assets/images/icons/knife.png);
+  }
+
+  &.i-cooking-proteins::before {
+    background-image: url(/assets/images/icons/pan.png);
+  }
+
+  &.i-how-to-shop::before {
+    background-image: url(/assets/images/icons/shop.png);
+  }
+
+  &.i-continuous-kitchen::before {
+    background-image: url(/assets/images/icons/recycle.png);
+  }
+
+  &.i-timing::before {
+    background-image: url(/assets/images/icons/clock.png);
+  }
+
+  &.i-meal-prep::before {
+    background-image: url(/assets/images/icons/camera.png);
+  }
+
+  &.i-learning::before {
+    background-image: url(/assets/images/icons/learning.png);
+  }
+}
