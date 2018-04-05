@@ -13,7 +13,8 @@ module.exports = function(defaults) {
     prember: {
       baseRoot: 'https://cookformom.com',
       urls: [
-        '/'
+        '/',
+        '/lessons/knife-skills'
       ]
     },
     sourcemaps: {
