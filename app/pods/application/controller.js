@@ -109,6 +109,13 @@ export default Controller.extend(Validations, {
       item,
       href
     });
+  },
+
+  clickedSocial(application, platform) {
+    application.get('metrics').trackEvent('Segment', {
+      event: 'clickedSocial',
+      platform
+    });
   }
 });
 
