@@ -1,0 +1,8 @@
+{{#section-info class=styleNamespace as |info|}}
+  {{yield (hash
+    info=info
+    highlights=highlights
+    activate=(action activate)
+    deactivate=(action deactivate)
+  )}}
+{{/section-info}}

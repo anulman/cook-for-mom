@@ -1,0 +1,70 @@
+& {
+  background-color: lighten($primary, 20%);
+}
+
+a {
+  color: $body-color;
+}
+
+.card + .card {
+  margin-top: 2rem;
+}
+
+@include media-breakpoint-up(md) {
+  .card-img-top {
+    border-radius: calc(0.25rem - 1px);
+  }
+
+  .card {
+    position: absolute;
+    max-width: 15rem;
+
+    &:nth-of-type(1) {
+      left: 0%;
+      top: 20%;
+
+      z-index: 4;
+      transform: rotate(-15deg);
+    }
+
+    &:nth-of-type(2) {
+      left: 20%;
+      bottom: 10%;
+
+      z-index: 3;
+      transform: rotate(2deg);
+    }
+
+    &:nth-of-type(3) {
+      left: 45%;
+      top: 20%;
+
+      z-index: 2;
+      transform: rotate(10deg);
+    }
+
+    &:hover, &.sim-hover {
+      z-index: 10;
+      transform: scale(1.5);
+
+      cursor: pointer;
+    }
+
+    &:nth-of-type(4) {
+      position: relative;
+      margin-top: auto;
+      margin-bottom: auto;
+      left: 20%;
+      visibility: hidden;
+
+      opacity: 0;
+      transform: rotate(40deg);
+
+      &:hover, &.sim-hover {
+        opacity: 1;
+        transform: scale(1.5);
+        visibility: visible;
+      }
+    }
+  }
+}
