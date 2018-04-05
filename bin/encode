@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+
+const child_process = require('child_process');
+const fs = require('fs-extra');
+const path = require('path');
+const glob = require('glob');
+const program = require('commander');
+
+program
+  .option('-f --force', 'Force re-conversion')
+  .arguments('<path> [paths...]')
+  .option('-o --output-dir [dir]', 'Output dir')
+  .action(function(_arg, args, options) {
+    for (let arg of [_arg, ...args]) {
+      for (let inputPath of glob.sync(arg)) {
+        let ext = path.extname(inputPath);
+        let name = path.basename(inputPath, ext);
+
+        if (ext === '.mov') {
+          let outputDir = options.outputDir || path.dirname(inputPath);
+          let outputName = path.join(outputDir, name);
+
+          let mp4Path = `${outputName}.mp4`;
+          let webmPath = `${outputName}.webm`;
+          let posterPath = `${outputName}.png`;
+          let gifPath = `${outputName}.gif`;
+
+          fs.mkdirp(outputDir);
+
+          /* eslint-disable max-len */
+          if (!fs.existsSync(mp4Path) || options.force) {
+            runCommand(`ffmpeg -y -i ${inputPath} -vf scale=640:-1 -crf 18 -preset veryslow -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -an -sn -dn ${mp4Path}`);
+          }
+
+          if (!fs.existsSync(webmPath) || options.force) {
+            runCommand(`ffmpeg -y -i ${mp4Path} -c:v libvpx-vp9 -pass 1 -b:v 1000K -threads 1 -speed 4 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm /dev/null`);
+            runCommand(`ffmpeg -y -i ${mp4Path} -c:v libvpx-vp9 -pass 2 -b:v 1000K -threads 1 -speed 0 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm ${webmPath}`);
+          }
+
+          if (!fs.existsSync(posterPath) || options.force) {
+            runCommand(`ffmpeg -i ${mp4Path} -vframes 1 ${posterPath}`);
+          }
+
+          if (!fs.existsSync(gifPath) || options.force) {
+            let palettePath = path.join(path.dirname(inputPath), 'palette.png');
+
+            runCommand(`ffmpeg -y -i ${mp4Path} -filter_complex "fps=10,scale=640:-1:flags=lanczos,palettegen" ${palettePath}`);
+            runCommand(`ffmpeg -i ${mp4Path} -i ${palettePath} -filter_complex "fps=10,scale=640:-1:flags=lanczos[x];[x][1:v]paletteuse" ${gifPath}`);
+            fs.removeSync(palettePath);
+          }
+          /* eslint-enable max-len */
+        }
+      }
+    }
+  });
+
+program.parse(process.argv);
+
+function runCommand(cmd) {
+  console.log(`running: ${cmd}`);
+  child_process.execSync(cmd);
+}

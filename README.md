@@ -13,6 +13,8 @@ You will need the following things properly installed on your computer.
 * [Yarn](https://yarnpkg.com/)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
+* [ffmpeg](https://ffmpeg.org/)
+    * Install with `brew install ffmpeg --with-libvpx --with-libvorbis --with-fdk-aac --with-opus` ([source](https://gist.github.com/Vestride/278e13915894821e1d6f))
 
 ## Installation
 
@@ -29,6 +31,19 @@ You will need the following things properly installed on your computer.
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
+
+### Video Conversion
+
+* **Use the included `bin` script:** `bin/encode lessons/knife-skills/**/edited/*.mov -o public/assets/videos/lessons/knife-skills`
+* WebM: Needs two passes:
+
+```
+ffmpeg -i <source> -c:v libvpx-vp9 -pass 1 -b:v 1000K -threads 1 -speed 4 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm /dev/null
+ffmpeg -i <source> -c:v libvpx-vp9 -pass 2 -b:v 1000K -threads 1 -speed 0 -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 -g 9999 -aq-mode 0 -an -dn -sn -f webm out.webm
+```
+
+* MP4: `ffmpeg -i <source> -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -an -sn -dn output.mp4`
+    * `pix_fmt` is only required for Quicktime / `.mov` support
 
 ### Running Tests
 
