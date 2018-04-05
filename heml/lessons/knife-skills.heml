@@ -1,0 +1,247 @@
+<heml>
+  <head>
+    <font href='https://fonts.googleapis.com/css?family=Itim|Lato:300,400|Zilla+Slab:300,400' />
+
+    <style>
+      body, container {
+        background-color: #ECC272;
+        font-family: "Zilla Slab", Georgia, Times, "Times New Roman", serif;
+        font-size: 16px;
+      }
+
+      container {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      strong, em {
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      block {
+        background-color: #F8E9CE;
+        font-weight: 300;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+        font-weight: 400;
+      }
+
+      button {
+        background-color: #717AC1;
+      }
+
+      .footer {
+        text-align: center;
+        color: #BA9C85;
+      }
+
+      .footer a {
+        color: #BA9C85;
+      }
+
+      .header a {
+        text-decoration: none;
+      }
+
+      .header__hero {
+        width: 100%;
+        box-sizing: border-box;
+        background: #B8BEDF;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #717AC1;
+        text-align: center;
+      }
+
+      .header__hero h1 {
+        font-family: "Itim", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      block.header__content,
+      block.main__content {
+        padding: 16px 24px;
+      }
+
+      .header__content button {
+        font-size: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+      }
+
+      .header__content p small {
+        color: #BA9C85;
+      }
+
+      .header__content p small a {
+        color: inherit;
+      }
+
+      .header__cta {
+        text-align: center;
+      }
+
+      .header__introduction {
+      }
+
+      .header__table-of-contents,
+      .content__container {
+        background-color: white;
+      }
+
+      .header__table-of-contents h4 {
+        margin-top: 0;
+      }
+
+      .header__table-of-contents ul {
+        margin: 0;
+      }
+
+      .header__table-of-contents li {
+        margin-bottom: 8px;
+        list-style-type: none;
+      }
+
+      .header__table-of-contents a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .header__table-of-contents column {
+        vertical-align: middle !important;
+      }
+
+      .header__table-of-contents--name {
+        padding-left: 16px;
+      }
+
+      .header__opt-out {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .main {
+        margin: 24px 0;
+      }
+
+      block.content__container {
+        padding-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <container>
+      <block class='header'>
+        <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=hero-link&mc_referrer=*|EMAIL|*' target='_blank'>
+          <block class='header__hero'>
+            <h1> Knife Skills: Chunks & Strips </h1>
+          </block>
+
+          <img class='header__image' src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/21491024-8f35-4dba-82be-94104a38e9e6.jpg' />
+        </a>
+
+        <block class='header__content'>
+          <block class='header__cta'>
+            <button href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=header-cta&mc_referrer=*|EMAIL|*' target='_blank'>Click here for the full lesson!</button>
+            <p><small>
+              You may be asked for your email again.<br />
+              Don't worry if this happens; we will not sign you up twice.
+            </small></p>
+          </block>
+
+          <block class='header__table-of-contents'>
+            <h4> This week, we will learn... </h4>
+            <ul>
+              <li><row>
+                <column large=1 small=3> <a href=https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-1&mc_referrer=*|EMAIL|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/8094f980-e62f-4013-bb90-59b6cb3566df.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-1&mc_referrer=*|EMAIL|*' target='_blank'>An <em>easy</em>, delicious recipe for <em>salad</em> with homemade <em>dressing</em> </column>
+              </row></li>
+              <li><row>
+                <column large=1 small=3> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-2&mc_referrer=*|EMAIL|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/d548fcab-36ec-4dcc-bf90-6da8d1e46297.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-2&mc_referrer=*|EMAIL|*' target='_blank'>A <em>simple</em> recipe for <em>ceviche</em>, a Spanish dish of <em>cold fish</em> "cooked" in <em>acid</em> </column>
+              </row></li>
+              <li><row>
+                <column large=1 small=3> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-3&mc_referrer=*|EMAIL|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/0db7ef45-110b-4b94-913c-003ebaca6fd7.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-3&mc_referrer=*|EMAIL|*' target='_blank'>How to <em>hold your knife</em> for maximum <em>safety</em>, comfort, and <em>control</em> </column>
+              </row></li>
+              <li><row>
+                <column large=1 small=3> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-4&mc_referrer=*|EMAIL|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/38f348e1-1500-4dd7-b257-1991b4fe03bc.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-4&mc_referrer=*|EMAIL|*' target='_blank'>Several <em>foundational cuts</em>, including <em>strips</em>, <em>juliennes</em>, and <em>dices</em> </column>
+              </row></li>
+            </ul>
+          </block>
+        </block>
+      </block>
+
+      <block class='main'>
+        <block class='main__content content'>
+          <block class='content__container'>
+            <p> Hello new cook. Welcome to <em>Week One</em> of <a href='https://cookformom.com?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=header-link&mc_referrer=*|EMAIL|*' target='_blank'>Cook For Mom</a>. In an ideal world, we humans would be born with the ability, confidence and <em>cooking skills</em> to feed ourselves. But if you’ve signed up for this <em>series of lessons</em> in order to make dinner for your mother, well that’s great too. </p>
+            <p> I assume you’ve peeked at <em>our welcome email</em> with its recipe for a <em>multi-course meal</em>, and are wondering how we’re going to get there from week one, where we’re starting by making <em>a salad</em>. Before we can prepare a good cassoulet, the elements of white beans, lamb sausage and confit duck all in perfect harmony, we need to learn the <em>essential skills</em> of working with a <em>kitchen knife</em>. First of all, <em>don’t feel bad</em> because you don’t know how to cook. No one taught you. It’s not part of our public education. But, starting now, that’s what we’re going to do. </p>
+            <p> Well, I’ve got some <em>good news</em> and bad news for you. Cooking is <em>work</em>. Just like exercise is work, relationships are work and work is work. There are <em>no shortcuts</em>. But just like those other areas, if you put in the work, you are <em>guaranteed to improve</em> and <em>reap profound benefits</em>. Your life will be better for it and you will wonder why you didn’t learn sooner. </p>
+            <p> This first lesson is going to be <em>super simple</em>. We won’t be using any heat, just raw ingredients, focussing instead on <em>knife use</em> and <em>safety</em>. </p>
+          </block>
+        </block>
+
+        <img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/060bf8de-dc85-4558-9c6b-409fadd502ad.jpg' />
+
+        <block class='main__content content'>
+          <block class='content__container'>
+            <p> In the spirit of <em>keeping sharp</em> with our <em>cutting edge</em> content, we plan to send a <em>FREE knife sharpener</em> to up to three <em>lucky subscribers</em>! Find out how to <em>get yours</em> in <em>this week's lesson</em>. </p>
+
+            <button href='https://cookformom.com/lessons/knife-skills?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=contest-cta&mc_referrer=*|EMAIL|*' target='_blank'>Take me to the lesson</button>
+          </block>
+        </block>
+      </block>
+
+      <block class='footer'>
+        *|IF:LIST|*
+          <p>
+            <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em><br />
+            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+              You are receiving this email because you signed up for a digital cooking class at <a href='https://cookformom.com?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=footer-link&mc_referrer=*|EMAIL|*' target='_blank'>https://cookformom.com</a>
+            </p>
+            <p>
+              <strong>Our mailing address is:</strong><br />
+              10667994 Canada Inc.<br />
+              PO Box 40024<br />
+              Dupont PO<br />
+              Toronto, Ontario, Canada
+            </p>
+            <!-- *|END:IF|* -->
+          </p>
+        *|ELSE:|*
+          <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+            <p> <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em> </p>
+            <p>
+              <strong>Our mailing address is:</strong><br />
+              10667994 Canada Inc.<br />
+              PO Box 40024<br />
+              Dupont PO<br />
+              Toronto, Ontario, Canada
+            </p>
+          <!-- *|END:IF|* -->
+        *|END:IF|*
+
+        <p>
+          <a href="*|UNSUB|*">unsubscribe from this list</a>
+          | <a href="*|UPDATE_PROFILE|*" class="utilityLink">update subscription preferences</a>
+          <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+            | <a href="*|ARCHIVE|*" class="utilityLink">view email in browser</a>
+          <!-- *|END:IF|* -->
+        </p>
+      </block>
+    </container>
+  </body>
+</heml>
