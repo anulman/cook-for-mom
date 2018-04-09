@@ -1,0 +1,9 @@
+{{#each highlights as |section|}}
+  <li class='i-{{section.slug}} {{if section.active 'sim-hover'}}'
+    onmouseover={{action activate section}}
+    onmouseout={{action deactivate section}}>
+    <a href='#{{section.slug}}'>
+      {{html-safe section.description}}
+    </a>
+  </li>
+{{/each}}

@@ -1,8 +1,7 @@
 {{#section-info class=styleNamespace as |info|}}
   {{yield (hash
     info=info
-    highlights=highlights
-    activate=(action activate)
-    deactivate=(action deactivate)
+    cards=(component cardsComponent)
+    list=(component listComponent)
   )}}
 {{/section-info}}

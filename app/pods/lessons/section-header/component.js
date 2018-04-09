@@ -1,11 +1,8 @@
 import Component from '@ember/component';
-import { alias } from '@ember/object/computed';
 
-import Activatable from '../../../mixins/activatable';
-
-export default Component.extend(Activatable, {
+export default Component.extend({
   tagName: '',
 
-  highlights: null, // is array
-  activatables: alias('highlights'),
+  cardsComponent: 'lessons/section-header/cards',
+  listComponent: 'lessons/section-header/list'
 });

@@ -1,0 +1,18 @@
+{{#each highlights as |section|}}
+  <a href='#{{section.slug}}' class='card {{section.slug}} {{if section.active 'sim-hover'}}'
+    onmouseover={{action activate section}}
+    onmouseout={{action deactivate section}}>
+      {{#if section.videoSources}}
+        <video class='card-img-top' autoplay playsinline loop muted poster={{section.imageUrl}}>
+          {{#each section.videoSources as |source|}}
+            <source src={{source.src}} type={{source.type}}>
+          {{/each}}
+        </video>
+      {{else if section.imageUrl}}
+        <img class='card-img-top' src='{{section.imageUrl}}'>
+      {{/if}}
+    <div class='card-body d-md-none'>
+      <p class='card-text text-center'> {{html-safe section.description}} </p>
+    </div>
+  </a>
+{{/each}}
