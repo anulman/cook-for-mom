@@ -99,7 +99,7 @@ function onClick(/* event */) {
 
   if (isPresent(specialDay) && specialDay.type === 'lesson') {
     if (day.moment.isSameOrBefore(new Date(), 'day')) {
-      this.get('router').transitionTo(`lessons.${specialDay.value.slug}`);
+      this.get('router').transitionTo('lessons.lesson', specialDay.value.slug);
     }
   } else if (get(day, 'isToday')) {
     this.get('nudgeSignup')();

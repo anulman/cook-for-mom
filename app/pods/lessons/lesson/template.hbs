@@ -1,0 +1,36 @@
+{{#lessons/section-header as |header|}}
+  {{#header.info.title}} {{model.title}} {{/header.info.title}}
+  {{#header.info.lead}} In this lesson, we will learn... {{/header.info.lead}}
+
+  <div class='row'>
+    {{header.cards model.sections.highlights class='col-md-7 p-relative d-flex flex-column'}}
+    {{#header.info.content tagName='div' class='col-md-5 d-none d-md-block'}}
+      {{header.list model.sections.highlights tagName='ul' class='pl-0 d-flex flex-column justify-content-between'}}
+    {{/header.info.content}}
+  </div>
+{{/lessons/section-header}}
+
+{{#lessons/section-main model.sections as |main|}}
+  <div class='row'>
+    <aside class='col-md-4'>
+      {{#main.info.lead class='d-none d-md-block'}} Table of Contents {{/main.info.lead}}
+      {{#main.info.content tagName='ul' class='nav text-right'}}
+        {{main.toc model.sections tagName=''}}
+      {{/main.info.content}}
+    </aside>
+
+    <main class='col-md-8'>
+      {{#each model.sections as |section|}}
+        {{#main.section section}}
+          {{#main.info.lead}} {{section.title}} {{/main.info.lead}}
+          {{#main.info.content tagName='div'}}
+            {{main.content model section
+              tagName=''
+              trackAffiliate=(action lessons.application.trackAffiliate lessons.application)
+              nudge=(action lessons.application.nudge lessons.application)}}
+          {{/main.info.content}}
+        {{/main.section}}
+      {{/each}}
+    </main>
+  </div>
+{{/lessons/section-main}}

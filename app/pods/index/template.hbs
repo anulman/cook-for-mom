@@ -13,7 +13,7 @@
     {{items.item 'Menu' '#menu'}}
     {{#items.item 'Six Free Lessons' '#six-free-lessons'}}
       {{#bs-tooltip class='dropdown-menu'}}
-        {{link-to 'Week 1: Knife Skills' 'lessons.knife-skills' class='dropdown-item'}}
+        {{link-to 'Week 1: Knife Skills' 'lessons.lesson' 'knife-skills' class='dropdown-item'}}
         <a class='dropdown-item' disabled> Week 2: Cooking Proteins </a>
         <a class='dropdown-item' disabled> Week 3: How to Shop </a>
         <a class='dropdown-item' disabled> Week 4: The Continuous Kitchen </a>
@@ -111,7 +111,7 @@
             onmouseover={{action calendar.activate lesson}}
             onmouseout={{action calendar.deactivate lesson}}>
             {{#if (is-same-or-after lesson.date precision='day')}}
-              {{link-to (html-safe lesson.description) (concat 'lessons.' lesson.slug)}}
+              {{link-to (html-safe lesson.description) 'lessons.lesson' lesson.slug}}
             {{else}}
               {{html-safe lesson.description}}
             {{/if}}

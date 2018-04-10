@@ -23,12 +23,7 @@ const Router = EmberRouter.extend(RouterScroll, {
 
 Router.map(function() {
   this.route('lessons', function() {
-    this.route('knife-skills');
-    this.route('cooking-proteins');
-    this.route('how-to-shop');
-    this.route('continuous-kitchen');
-    this.route('timing');
-    this.route('meal-prep');
+    this.route('lesson', { path: '/:id' });
   });
 });
 
