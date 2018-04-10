@@ -4,9 +4,10 @@ import { set } from '@ember/object';
 
 export default Route.extend({
   model({ id }) {
+    let path = `lessons/content/${id.replace(/\/$/, '')}`;
     let owner = getOwner(this);
-    let { class: headTags } = owner.factoryFor(`head-tags:lessons/${id}`);
-    let { class: model } = owner.factoryFor(`lesson:lessons/${id}`);
+    let { class: headTags } = owner.factoryFor(`head-tags:${path}`);
+    let { class: model } = owner.factoryFor(`lesson:${path}`);
 
     this.set('headTags', headTags);
 

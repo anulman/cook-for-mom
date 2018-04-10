@@ -11,7 +11,7 @@ const ContentComponent = Component.extend({
     let sectionSlug = this.get('section.slug');
 
     return getOwner(this)
-      .lookup(`template:lessons/${lessonId}/sections/${sectionSlug}`);
+      .lookup(`template:lessons/content/${lessonId}/sections/${sectionSlug}`);
   })
 });
 
