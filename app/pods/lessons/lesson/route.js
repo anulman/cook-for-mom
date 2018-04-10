@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import { getOwner } from '@ember/application';
+import { set } from '@ember/object';
 
 export default Route.extend({
   model({ id }) {
@@ -13,7 +14,15 @@ export default Route.extend({
   },
 
   afterModel(model) {
-    model.sections.highlights = model.highlights
-      .map((slug) => model.sections.findBy('slug', slug))
+    let highlights = model.highlights
+      .map((slug) => model.sections.findBy('slug', slug));
+
+    set(model.sections, 'highlights', highlights);
+  },
+
+  actions: {
+    error() {
+      this.replaceWith('lessons.index');
+    }
   }
 });
