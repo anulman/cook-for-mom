@@ -5,6 +5,9 @@ const ContentSection = Component.extend({
   tagName: '',
 
   sections: null, // is array
+  tocComponent: 'lessons/section-main/toc',
+  sectionComponent: 'lessons/section-main/section',
+  contentComponent: 'lessons/section-main/content',
 
   didInsertElement() {
     setActiveAnchor.call(this);
@@ -44,7 +47,7 @@ export default ContentSection;
 
 function setActiveAnchor() {
   let element = this.childViews[0].element;
-  let sections = Array.from(element.querySelectorAll('.content-section'));
+  let sections = Array.from(element.querySelectorAll('.info--content'));
   let anchorLinks = element.querySelectorAll('aside a');
   let minTop = window.innerHeight * .5;
 

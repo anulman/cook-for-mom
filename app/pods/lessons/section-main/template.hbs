@@ -1,6 +1,8 @@
 {{#section-info class=styleNamespace as |info|}}
   {{yield (hash
     info=info
-    sections=sections
+    toc=(component tocComponent)
+    section=(component sectionComponent)
+    content=(component contentComponent)
   )}}
 {{/section-info}}

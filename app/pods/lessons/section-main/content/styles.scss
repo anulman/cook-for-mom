@@ -1,0 +1,41 @@
+.info--content {
+  padding: 2rem;
+  line-height: 1.75rem;
+
+  > :not(:last-child), > blockquote > :not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  > img:first-child {
+    margin-top: -2rem;
+    margin-left: -2rem;
+    max-width: calc(100% + 4rem);
+
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+
+  ol, blockquote {
+    border-left: 4px transparentize($primary, 0.2) solid;
+
+    button.btn {
+      display: block;
+
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem 2rem;
+    }
+  }
+
+  blockquote {
+    padding-left: 2rem;
+  }
+
+  ol {
+    padding-left: 3rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
