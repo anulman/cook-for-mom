@@ -1,0 +1,9 @@
+{
+  "name": "ember-async-layout",
+  "keywords": [
+    "ember-addon"
+  ],
+  "ember-addon": {
+    "before": "prember"
+  }
+}

@@ -43,6 +43,7 @@
     "ember-cp-validations": "^3.5.2",
     "ember-data": "~3.0.0",
     "ember-export-application-global": "^2.0.0",
+    "ember-fetch": "^3.4.5",
     "ember-fingerprintjs2": "^0.0.3",
     "ember-firebase-service": "^4.0.0",
     "ember-full-story": "^0.1.1",
@@ -62,7 +63,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "fingerprintjs2": "^1.6.1",
     "loader.js": "^4.2.3",
-    "prember": "^0.2.2",
+    "prember": "^0.3.0",
     "prember-sitemap-generator": "^0.0.3"
   },
   "engines": {
@@ -78,6 +79,12 @@
     "tinify": "^1.5.0"
   },
   "fastbootDependencies": [
-    "blueimp-md5"
-  ]
+    "blueimp-md5",
+    "fs"
+  ],
+  "ember-addon": {
+    "paths": [
+      "lib/ember-async-layout"
+    ]
+  }
 }
