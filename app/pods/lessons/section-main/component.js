@@ -7,7 +7,6 @@ const ContentSection = Component.extend({
   sections: null, // is array
   tocComponent: 'lessons/section-main/toc',
   sectionComponent: 'lessons/section-main/section',
-  contentComponent: 'lessons/section-main/content',
 
   didInsertElement() {
     setActiveAnchor.call(this);

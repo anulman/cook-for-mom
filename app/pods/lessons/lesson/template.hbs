@@ -21,14 +21,19 @@
 
     <main class='col-md-8'>
       {{#each model.sections as |section|}}
-        {{#main.section section}}
+        {{#main.section model section}}
           {{#main.info.lead}} {{section.title}} {{/main.info.lead}}
-          {{#main.info.content tagName='div'}}
-            {{main.content model section
-              tagName=''
-              trackAffiliate=(action lessons.application.trackAffiliate lessons.application)
-              nudge=(action lessons.application.nudge lessons.application)}}
-          {{/main.info.content}}
+          {{#with (async-layout/fetch
+            (join 'lessons' model.id 'sections' section.slug by='/')
+            suffix='/compiled/ember.json') as |layout|}}
+            {{#main.info.content tagName='div' class=(if layout.isPending 'is-loading')}}
+              {{#if layout.isFulfilled}}
+                {{async-layout layout.content
+                  trackAffiliate=(action lessons.application.trackAffiliate lessons.application)
+                  nudge=(action lessons.application.nudge lessons.application)}}
+              {{/if}}
+            {{/main.info.content}}
+          {{/with}}
         {{/main.section}}
       {{/each}}
     </main>
