@@ -1,17 +1,24 @@
 import Route from '@ember/routing/route';
-import { getOwner } from '@ember/application';
 import { set } from '@ember/object';
+import { hash } from 'rsvp';
+
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  asyncResource: service(),
+
   model({ id }) {
-    let path = `lessons/content/${id.replace(/\/$/, '')}`;
-    let owner = getOwner(this);
-    let { class: headTags } = owner.factoryFor(`head-tags:${path}`);
-    let { class: model } = owner.factoryFor(`lesson:${path}`);
+    let asyncResource = this.get('asyncResource');
+    let basePath = `lessons/${id.replace(/\/$/, '')}`;
+    let lesson = asyncResource.fetch(`${basePath}/lesson.json`);
+    let headTags = asyncResource.fetch(`${basePath}/head-tags.json`);
 
-    this.set('headTags', headTags);
+    return hash({ lesson, headTags })
+      .then(({ lesson, headTags }) => {
+        this.set('headTags', headTags);
 
-    return model;
+        return lesson;
+      });
   },
 
   afterModel(model) {
