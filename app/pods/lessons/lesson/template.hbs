@@ -21,7 +21,7 @@
 
     <main class='col-md-8'>
       {{#each model.sections as |section|}}
-        {{#main.section model section}}
+        {{#main.section section}}
           {{#main.info.lead}} {{section.title}} {{/main.info.lead}}
           {{#with (async-layout/fetch
             (join 'lessons' model.id 'sections' section.slug by='/')
