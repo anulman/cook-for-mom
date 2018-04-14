@@ -5,7 +5,7 @@ export const LESSONS = [{
   title: 'Week 1: Knife Skills',
   description: '<em>Knife skills</em>, including <em>chopping</em>, <em>dicing</em>, and basic safety'
 }, {
-  slug: 'cooking-proteins',
+  slug: 'pan-roasting',
   title: 'Week 2: Cooking Proteins',
   description: '3 common techniques for cooking proteins like <em>fish</em>, <em>chicken</em>, and <em>tofu</em>'
 }, {
@@ -30,7 +30,7 @@ export const DATES = [
   { date: '04-02', type: 'lesson', value: findLesson('knife-skills') },
     { date: '04-05', type: 'activity', value: 1 },
     { date: '04-06', type: 'activity', value: 1 },
-  { date: '04-09', type: 'lesson', value: findLesson('cooking-proteins') },
+  { date: '04-09', type: 'lesson', value: findLesson('pan-roasting') },
     { date: '04-12', type: 'activity', value: 1 },
     { date: '04-14', type: 'activity', value: 2 },
   { date: '04-16', type: 'lesson', value: findLesson('how-to-shop') },
