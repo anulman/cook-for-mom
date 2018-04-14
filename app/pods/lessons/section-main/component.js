@@ -46,9 +46,9 @@ export default ContentSection;
 
 function setActiveAnchor() {
   let element = this.childViews[0].element;
-  let sections = Array.from(element.querySelectorAll('.info--content'));
+  let sections = Array.from(element.querySelectorAll('a.anchor'));
   let anchorLinks = element.querySelectorAll('aside a');
-  let minTop = window.innerHeight * .5;
+  let minTop = window.innerHeight / 2;
 
   // n.b. `reverse` reverses the array in place, so we count down
   let firstVisibleIndex = (sections.length - 1) - sections.reverse()
