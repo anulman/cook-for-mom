@@ -125,7 +125,10 @@ main {
       border-top-right-radius: .5rem;
     }
 
-    ol, blockquote {
+    > ul:not(.recipe__directions),
+    > ul.recipe__directions > li > ul,
+    ol,
+    blockquote {
       border-left: 4px transparentize($primary, 0.2) solid;
 
       button.btn {
@@ -137,6 +140,10 @@ main {
       }
     }
 
+    li.notes {
+      list-style: none;
+    }
+
     blockquote {
       padding-left: 2rem;
     }
@@ -145,8 +152,31 @@ main {
       padding-left: 3rem;
     }
 
+    ul.recipe__directions, ul.recipe__directions ul {
+      list-style: none;
+      padding-left: 0;
+
+      > :not(:first-child) {
+        margin-top: 1.5rem;
+      }
+
+      > li > ul {
+        padding-left: 2rem;
+      }
+    }
+
     a {
       text-decoration: underline;
     }
+
+    ul.recipe__directions ul {
+      font-size: .9rem;
+      line-height: 1.5rem;
+    }
   }
+}
+
+h4 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
 }

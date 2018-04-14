@@ -8,3 +8,36 @@ section.info {
     margin-top: 200px !important;
   }
 }
+
+.info ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: .75rem 0 .75rem 3.5rem;
+
+    transition: transform 0.1s ease-in;
+    text-shadow: none;
+
+    &:hover, &.sim-hover {
+      text-decoration: underline;
+      cursor: pointer;
+      transform: skew(-5deg);
+    }
+  }
+
+  li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 100%;
+
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  margin-bottom: 0;
+}
