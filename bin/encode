@@ -55,18 +55,21 @@ function encodeImage(inputPath, options) {
   let outputDir = options.outputDir || path.dirname(inputPath);
 
   let tinyPath = path.join(outputDir, `${name}-tiny${ext}`);
+  let source = tinify.fromFile(inputPath);
+  let width = Number(options.width);
 
   if (!fs.existsSync(tinyPath) || options.force) {
-    let width = Number(options.width);
-    let source = tinify.fromFile(inputPath);
-    let resized = width && source.resize({ method: 'scale', width })
-
     debug(`tinifying: ${inputPath}`);
     source.toFile(tinyPath);
+  }
 
-    if (width) {
+  if (width) {
+    let resizedPath = path.join(outputDir, `${name}-${width}${ext}`);
+    let resized = width && source.resize({ method: 'scale', width })
+
+    if (!fs.existsSync(resizedPath) || options.force) {
       debug(`resizing: ${inputPath}`);
-      resized.toFile(path.join(outputDir, `${name}-${width}${ext}`));
+      resized.toFile(resizedPath);
     }
   }
 }
