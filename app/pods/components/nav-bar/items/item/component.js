@@ -6,11 +6,12 @@ const ItemComponent = Component.extend({
 
   label: null,
   href: null,
+  model: null,
   disabled: false
 });
 
 ItemComponent.reopenClass({
-  positionalParams: ['label', 'href']
+  positionalParams: ['label', 'href', 'model']
 });
 
 export default ItemComponent;
