@@ -17,7 +17,8 @@ module.exports = function(defaults) {
       baseRoot: 'https://cookformom.com',
       urls: [
         '/',
-        '/lessons/knife-skills'
+        '/lessons/knife-skills',
+        '/lessons/pan-roasting'
       ]
     },
     sourcemaps: {
