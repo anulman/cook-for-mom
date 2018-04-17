@@ -1,6 +1,7 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const stew = require('broccoli-stew');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -12,6 +13,10 @@ module.exports = function(defaults) {
       'importBootstrapFont': false,
       'importBootstrapCSS': false,
       'insertEmberWormholeElementToDom': false
+    },
+    hyde: {
+      directories: ['lessons', 'recipes'],
+      prember: false
     },
     prember: {
       baseRoot: 'https://cookformom.com',
@@ -29,5 +34,5 @@ module.exports = function(defaults) {
   app.import('node_modules/firebase/firebase.js');
   app.import('node_modules/firebase/firebase-firestore.js');
 
-  return app.toTree();
+  return stew.mv(app.toTree(), 'hyde/', 'static/');
 };
