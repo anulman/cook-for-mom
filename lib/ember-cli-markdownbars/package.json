@@ -1,0 +1,9 @@
+{
+  "name": "ember-cli-markdownbars",
+  "keywords": [
+    "ember-addon"
+  ],
+  "ember-addon": {
+    "after": "ember-cli-hyde"
+  }
+}

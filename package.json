@@ -87,7 +87,8 @@
   ],
   "ember-addon": {
     "paths": [
-      "lib/ember-async-layout"
+      "lib/ember-async-layout",
+      "lib/ember-cli-markdownbars"
     ]
   }
 }
