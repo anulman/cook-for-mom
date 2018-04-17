@@ -1,0 +1,19 @@
+recipe_name: Deglazing Sauce
+recipe_uri: /recipes/deglazing-sauce
+ingredients:
+  - ingredient: White wine
+    X-display_name: White _wine_
+  - ingredient: Butter
+    X-display_name: _Butter_
+X-tools:
+  - tool: Ovenproof pan
+    X-display_name: Ovenproof _pan_
+steps:
+  - step: Put the _pan_ back on the _stove_ and _apply heat_.
+  - step: When it's _hot_, add a _couple glugs_ of _white wine_.
+    X-image_url: /assets/images/lessons/pan-roasting/deglazing-pan-800.jpg
+    X-image_position: top
+    notes:
+      - The _wine_ should _quickly boil_ as it hits the pan. This is called _deglazing_.
+  - step: Using a _spoon_ or _spatula_, _scrape_ the surface of the _pan_ to _extract_ as much of those _bits_, up into the _liquid_, as possible.
+  - step: _Add_ some _butter_ to the pan and _swirl_ with the _wine_. It should quickly _emulsify_ into a _silky sauce_ for you to _pour over_ the chicken.

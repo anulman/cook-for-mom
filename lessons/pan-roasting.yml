@@ -1,0 +1,71 @@
+title: Proteins & Pan-Roasting
+relationships:
+  highlights:
+    - id: pan-roasting/sections/recipe-pan-roasting-chicken
+      type: lessons/sections
+    - id: pan-roasting/sections/recipe-pan-roasted-brussels-sprouts
+      type: lessons/sections
+    - id: pan-roasting/sections/dont-overcrowd-the-pan
+      type: lessons/sections
+    - id: pan-roasting/sections/bonus-pan-sauce
+      type: lessons/sections
+  sections:
+    - id: pan-roasting/sections/introduction
+      type: lessons/sections
+    - id: pan-roasting/sections/what-is-pan-roasting
+      type: lessons/sections
+    - id: pan-roasting/sections/working-clean
+      type: lessons/sections
+    - id: pan-roasting/sections/time-to-lean-time-to-clean
+      type: lessons/sections
+    - id: pan-roasting/sections/dont-overcrowd-the-pan
+      type: lessons/sections
+    - id: pan-roasting/sections/buying-chicken
+      type: lessons/sections
+    - id: pan-roasting/sections/washing-chicken
+      type: lessons/sections
+    - id: pan-roasting/sections/recipe-pan-roasting-chicken
+      type: lessons/sections
+    - id: pan-roasting/sections/bonus-pan-roasting-other-meat-and-fish
+      type: lessons/sections
+    - id: pan-roasting/sections/recipe-pan-roasted-brussels-sprouts
+      type: lessons/sections
+    - id: pan-roasting/sections/bonus-pan-sauce
+      type: lessons/sections
+    - id: pan-roasting/sections/homework
+      type: lessons/sections
+meta:
+  headTags:
+    - type: title
+      tagId: title
+      content: "Cook For Mom - Week 2: Proteins & Pan-Roasting"
+    - type: meta
+      tagId: meta-og-url
+      attrs:
+        property: og:url
+        content: https://cookformom.com/lessons/pan-roasting
+    - type: meta
+      tagId: meta-og-title
+      attrs:
+        property: og:title
+        content: Proteins & Pan-Roasting
+    - type: meta
+      tagId: meta-og-image
+      attrs:
+        property: og:image
+        content: https://cookformom.com/assets/images/lessons/pan-roasting/pan-roasted-breast-b-800.jpg
+    - type: meta
+      tagId: meta-og-image-alt
+      attrs:
+        property: og:image:alt
+        content: Proteins & Pan-Roasting
+    - type: meta
+      tagId: meta-og-description
+      attrs:
+        property: og:description
+        content: Master the art of pan-roasting, with chicken, vegetables, and other meat, fish, and vegetables!
+    - type: meta
+      tagId: meta-description
+      attrs:
+        name: description
+        content: Master the art of pan-roasting, with chicken, vegetables, and other meat, fish, and vegetables!

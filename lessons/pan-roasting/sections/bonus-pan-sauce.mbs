@@ -1,0 +1,15 @@
+---
+title: "Bonus: Pan Sauce"
+slug: bonus-pan-sauce
+description: What to do with those _sticky bits_ you'll find _in the pan_ after _searing_
+imageUrl: /assets/images/lessons/pan-roasting/deglazing-pan-325.jpg
+relationships:
+  recipes:
+    - id: deglazing-sauce
+      type: recipes
+---
+When you _removed_ the <a href='#recipe-pan-roasting-chicken'>chicken</a> from the pan you probably noticed _little bits_ still _stuck_ to the _surface_. There may also be _liquid_ in the _pan_, _fat_ and _moisture_ that rendered out of the meat as it cooked. And all of this is _terrifically flavourful_. Let's make a _quick sauce_ out of it.
+
+{{recipe-presenter section.recipes}}
+
+You can get _fancier_ with this, _caramelizing vegetables_ in the _pan's fat_, _adding spices_, or _using flour_ to build it into a gravy. But this quick _pan sauce_ is a _two-minute_ affair that will immediately _bump up_ the status of your _properly cooked_ piece of _meat_.

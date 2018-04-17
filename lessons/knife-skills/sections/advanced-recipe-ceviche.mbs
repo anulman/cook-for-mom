@@ -1,0 +1,39 @@
+---
+title: "Advanced recipe: ceviche"
+slug: advanced-recipe-ceviche
+description: A _simple_ recipe for _ceviche_, a Spanish dish of _cold fish_ "cooked" in _acid_
+imageUrl: /assets/images/lessons/knife-skills/ceviche-5.jpg
+relationships:
+  recipes:
+    - id: ceviche
+      type: recipes
+---
+![A tasty-looking ceviche](/assets/images/lessons/knife-skills/ceviche-5.jpg)
+
+Understandably, once you’ve _learned_ to use a _chef’s knife_, you want to use it. And you _want something fancier_ to show for it. Here’s a recipe for a dish that _seems fancy_ but is in fact _very easy_. While it _does not require cooking_, it does present _ample opportunity_ to _practice_ your _knife work_.
+
+_Ceviche_ is just _fish_ prepared in a _bath of citrus juice_. Some people say “cooked” or “cured”. It’s actually a _chemical process_ called _denaturing_, which _breaks_ many of the _bonds_ that hold _protein molecules_ in their shape. The _acid_ of _lemon or lime_ changes the _fish’s flesh_ from its plush, raw, _translucent state_ to an _opaque firmness_ (and flavours it as well). The _type_ of fish _doesn’t matter_. Sea bream, tuna, arctic char or halibut all _work fine_. So long as it _isn’t_ a really _dense fish_, like pickerel or catfish. It just has to be _as fresh as possible_.
+
+{{#recipe-presenter section.recipes as |recipe|}}
+
+  Basic ceviche _ingredients_:
+
+  {{recipe.ingredients tagName='ol'}}
+
+  ![More ceviche](/assets/images/lessons/knife-skills/ceviche-6.jpg)
+
+  {{recipe.steps}}
+
+{{/recipe-presenter}}
+
+The _larger_ the piece, the _longer_ it takes the _acid_ to _reach the centre_ of the _fish_. With a _dark fish_ like tuna, you’ll _see_ it _change colour_ very _quickly_. _Season_ with _salt_ and you’ve got ceviche of the most basic kind.
+
+Some people like to _leave it overnight_ but with _bite-sized_ pieces of fish, it only needs _five minutes_ for the citrus to permeate. How much _lime juice_? _Start_ with _half a lime_ and _taste_ it. If your fish is _fresh enough_ to be used _for ceviche_, it’s fresh enough to be eaten as _sushi_.
+
+![Another ceviche. Are you not surprised?](/assets/images/lessons/knife-skills/ceviche-3.jpg)
+
+> Don’t know how to pick out fresh fish or talk to your fishmonger? Here’s <a href='http://www.chatelaine.com/food/kitchen-tips/how-to-buy-sustainable-seafood/' target='_blank'>a guide I wrote for Chatelaine.</a>
+
+The _essential technique_ is just _fish_ and _lime juice_; anything you add is just to round out the dish. I’ve seen _100 different versions_ of this _Latin American_ dish, served with yuzu, apples, kumquats, sesame oil, edamame, lemongrass, watermelon, etc. The most _common presentation_ is with _chilli_, _onion_, _cilantro_, _sweet potato_, and _corn_.
+
+For a _no-cooking_ version, stick with the _chilli_, _onions_ and _cilantro_. You can _use the onion_ to _practice slicing_ as thin as possible and the _chilli_ for _chopping_ as small as possible (aka _mincing_). _Cilantro_ is a hearty herb. Unlike basil or oregano, it _won’t bruise_ if you _chop it roughly_. A few slices of _avocado_ or _corn chips_ should turn this into a dish.

@@ -1,0 +1,13 @@
+recipe_name: Salad
+recipe_uri: /recipes/salad
+ingredients:
+  - ingredient: Lettuce
+  - ingredient: Tomato
+  - ingredient: Kale
+  - ingredient: Carrot
+  - ingredient: Cucumber
+  - ingredient: Sprouts
+  - ingredient: Beets
+  - ingredient: Nuts and seeds
+  - ingredient: Onions
+  - ingredient: Cheese

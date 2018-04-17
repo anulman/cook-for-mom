@@ -1,0 +1,12 @@
+recipe_name: Ceviche
+recipe_uri: /recipes/ceviche
+ingredients:
+  - ingredient: Fresh fish
+  - ingredient: Lime
+  - ingredient: Salt
+  - ingredient: Chilli ((any kind of fresh chilli, or a dried chilli, rehydrated by soaking in hot water for five minutes)
+  - ingredient: Onion
+  - ingredient: Cilantro
+  - ingredient: Avocado
+steps:
+  - step: Just _slice_ some _fish_ into _bite-sized chunks_ or strips (remember these shapes from above?) and _mix it_ with _lime juice_. That’s literally all there is to it.

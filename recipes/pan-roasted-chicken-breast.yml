@@ -1,0 +1,58 @@
+recipe_name: Pan-Roasted Chicken Breast
+recipe_uri: /recipes/pan-roasted-chicken-breast
+oven_temp:
+  amount: 400
+  unit: F
+ingredients:
+  - ingredient: Cooking oil
+    X-display_name: Cooking _oil_
+    notes:
+      - For cooking on a heat this high, we want canola, grapeseed or vegetable oil.
+      - Oils like olive and sesame have a low smoking point. That means they’re quicker to burn at a lower temperature.
+  - ingredient: Chicken breasts
+    X-display_name: _Chicken_ breasts
+    notes:
+      - For best results, use _skin-on_ chicken breasts
+  - ingredient: Pan sauce
+    X-display_name: Pan _sauce_
+    X-reference_recipe:
+      id: deglazing-sauce
+      type: recipes
+    X-reference_target: "#bonus-pan-sauce"
+X-tools:
+  - tool: Ovenproof pan
+    X-display_name: Ovenproof _pan_
+  - tool: Meat thermometer
+    X-display_name: Meat _thermometer_
+  - tool: Tongs
+    X-display_name: _Tongs_
+steps:
+  - step: Start by _preheating_ your oven to _400F_.
+  - step: On the stovetop, add a _splash of oil_ to your _oven-proof pan_ and bring it to _medium-high heat_.
+    notes:
+      - Let the _oil_ _heat up_ and _coat the surface_ of the _pan_. If the oil begins to _smoke_, turn the _heat down_.
+      - If you are using an _electric stove_, you can _adjust_ your application of heat _faster_ by taking the pan _on and off_ the element, rather than waiting for the coil to adjust.
+  - step: _Before_ adding _chicken_ to the _pan_, sprinkle it with _salt_. Do this _over the sink_, so any _chicken-tainted flakes_ fall where they can be _easily washed_ away.
+    notes:
+      - Use _more salt_ than you think. _Most_ will _fall off_ the surface.
+  - step: _Place_ the _chicken_ in the _pan_ _skin side down_. It should _sizzle_. _Wash_ your _hands_.
+    X-image_url: /assets/images/lessons/pan-roasting/chicken-pan-skin-down-800.jpg
+    notes:
+      - From this point on _only use_ a pair of _tongs_ to move the _chicken_ in the _pan_.
+      - When we _add protein_ to a _hot surface_, it forms a _bond_ that will _gradually_ be _released_ as it cooks. But if you try to _move_ it _too soon_ the _flesh_ will still be _bonded_ to the metal and it _will tear_. So try to _resist_ the _temptation_ to _fidget_, _jostle_, _inspect_ or _move_ the meat around in the pan.
+  - step: _Wait_ a few minutes, until you begin to see a _slight colouration_ around the _edge_ of the _meat_. Use the _tongs_ to lightly tap the _breast_, not _lifting_ or _moving_, just _testing_ to see if it is _bonded_ to the _pan_. If it _releases_, _lift_ it up to see the _colour_ on the _skin_. If it’s still _stuck_, be _patient_.
+    notes:
+      - Use your _senses_. Do you _see black_ around the _edges_? Smell _burning_? It's _too hot_. Remove it from the heat.
+      - These reactions _won't be obvious_ to spot _at first_. Over _time_, with _practice_, you will come to _recognize off-smells_. You will _know_ when chicken is _burning_ from the _other side_ of your _home_. At the _beginning_ though, _stay close_ to the pan.
+  - step: When the _skin_ reaches a _copper colour_, _turn_ the _breast_ so the _skin_ is _facing up_ and _slide the pan_ into the _oven_.
+    X-image_url: /assets/images/lessons/pan-roasting/chicken-oven-thermometer-800.jpg
+    notes:
+      - At this point you're just _waiting_ and _periodically checking_ to see if it's done. It'll probably take _around 10 to 15 minutes_. But what you _don't_ want to do is _depend entirely_ on a _time estimate_. The goal is not just to follow instructions, but _learn_ what _signs_ to watch for, to _develop senses_ you can trust.
+  - step: _When_ the meat reaches _165F_, it's done.
+    notes:
+      - For your _first_ chicken breast, use a _meat thermometer_. Every _five minutes_, _remove_ the chicken from the oven and measure its temperature. More importantly, each time you check on the meat, touch it. Press and squeeze it lightly with your fingers, washing them after.
+      - _Once_ you've done this a _few times_, you will begin to _recognize_ the _transformation_ the chicken goes through, the _change_ in its _texture_ as it _raises_ in _temperature_. _Eventually_, you will _know_ the _doneness_ of a chicken breast _by feel_ and _will not need_ the _thermometer_. You _must practice_ to master this.
+  - step: Transfer the meat to a cutting board and let it rest for a few minutes before slicing. _Congratulations!_ You've _safely cooked_ a chicken breast.
+    notes:
+      - _Don't rinse_ out the pan _yet_. We're going to use it to make a pan sauce, which we'll get to _down below_.
+      - _Taste_ it. _When_ you were _adding_ the _salt_, it seemed like too much. But _how much_ permeated the _chicken's centre_? Will you use _more or less next time_?

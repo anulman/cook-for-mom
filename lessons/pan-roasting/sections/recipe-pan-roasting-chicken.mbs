@@ -1,0 +1,21 @@
+---
+title: "Recipe: Pan-Roasting Chicken"
+slug: recipe-pan-roasting-chicken
+description: How to _pan-roast_ a _chicken breast_, and how this applies to _other meat_ and _fish_
+image_url: /assets/images/lessons/pan-roasting/pan-roasted-breast-b-325.jpg
+relationships:
+  recipes:
+    - id: pan-roasted-chicken-breast
+      type: recipes
+---
+![A tasty, pan-roasted chicken breast](/assets/images/lessons/pan-roasting/pan-roasted-breast-b-800.jpg)
+
+Though the _cooking times_ and <a href='https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures-chart.html' target='_blank'>temperatures</a> will vary, the _method_ of _pan-roasting_ will be the _same_ with _chicken_, _beef_, _pork_, _lamb_, etc. We're going to _practice_ with _chicken_ because it’s the most _common_ and _least expensive_.
+
+We _could_ do this _entirely_ in the _oven_. The reason we _sear first_ is the _Maillard reaction_. When we _slowly_ cook _vegetables_ like _carrots_, _onions_, _beets_ or _parsnips_, the _high sugar_ content develops into a _complex flavour_ through a _process_ known as _caramelization_. The _Maillard reaction_ is a _similar_ set of _flavours_ and _smells_ released by _browning meat_. And yes, it makes meat _look more appetizing_ as well.
+
+The _trick_ to _searing_ is bringing the pan to the _right heat before adding_ anything to it. _Too low_ and your protein _will stick_. _Too high_ and it _will burn_. Everyone's _stove_ is _different_. The _sweet medium-high spot_ for _searing_ on mine is 7 on a dial that goes to 9 (why don’t they go to 10?).  Let the _pan sit_ at that heat for _a minute or two_. Even _better_ if you can _see_ a little _heat distortion_ rising from the surface.
+
+Make sure you're using a _pan_ that can go in the _oven_, meaning _no wooden or plastic_ handle. I like _cast iron_ for the way it _distributes_ and _retains heat_. But there's _no reason_ to be a _snob_ about it. Use _whatever pan_ you've got.
+
+{{recipe-presenter section.recipes}}

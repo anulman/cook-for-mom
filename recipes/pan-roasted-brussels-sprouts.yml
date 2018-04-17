@@ -1,0 +1,26 @@
+recipe_name: Pan-Roasted Brussels Sprouts
+recipe_uri: /recipes/pan-roasted-brussels-sprouts
+oven_temp:
+  amount: 400
+  unit: F
+ingredients:
+  - ingredient: Cooking oil
+    X-display_name: Cooking _oil_
+    notes:
+      - Use one with a _high smoking point_, like _canola_, _grapeseed_ or _vegetable_ oil.
+  - ingredient: Brussels sprouts
+    X-display_name: _Brussels sprouts_
+X-tools:
+  - tool: Ovenproof pan
+    X-display_name: Ovenproof _pan_
+  - tool: Tongs
+    X-display_name: _Tongs_
+steps:
+  - step: To start, _trim_ a bit from the _root_ end of each _Brussels sprouts_, then _slice_ them in _half_.
+  - step: _Preheat oven_ to _400F_. On the stovetop, add a _splash of oil_ to your _oven-proof pan_ and bring it to _medium-high heat_.
+  - step: Using _oil_ with a _high smoking point_, _sear_ the _Brussels sprouts_, flat side down.
+    notes:
+      - _Don't overcrowd_ the pan!
+  - step: _Wait_ a few minutes, until the _Brussels sprouts_ start to _brown_. Then _turn them over_ and _transfer_ the _pan_ to the _oven_.
+  - step: _Roast_ until _cooked through_, about _five minutes_. When a _paring knife_ slides in and out _easily_, they're done.
+  - step: Season to taste with salt and pepper.

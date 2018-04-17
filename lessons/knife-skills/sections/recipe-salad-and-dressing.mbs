@@ -1,0 +1,61 @@
+---
+title: "Recipe: salad and dressing"
+slug: recipe-salad-and-dressing
+description: An _easy_, delicious recipe for _salad_ with homemade _dressing_
+imageUrl: /assets/images/lessons/knife-skills/salad-1.jpg
+relationships:
+  recipes:
+    - id: salad
+      type: recipes
+---
+![I bet you'd like to eat this salad](/assets/images/lessons/knife-skills/salad-1.jpg)
+
+It would be _preposterous_ to give you _measurements_ for things like _lettuce_ and _carrots_. Instead, let me _suggest tips_ for preparing each of the _ingredients on this list_. And the _only direction_ is, pick _at least three items_ (at least _one with crunch_) and _combine them_ in a _bowl_ with _dressing_. Though whatever you do, __DON’T EVER__ dress a salad _in advance_. If you’re _packing a salad_ for the office, the _acid_ in a dressing will just _wilt_ and _sog_ the _vegetables_ by lunchtime.
+
+{{#recipe-presenter section.recipes as |recipe|}}
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Lettuce') tagName='p'}}
+    __Lettuce__—Yes, you have to _wash lettuce_. It’s annoying. And you can _buy pre-washed_ lettuce. But it _doesn’t stay fresh_ long. Even _organic lettuce_ needs to be washed, as it usually _contains soil_ near the stem. If you don’t have a _salad spinner_, just _rinse each leave_ and _submerge_ all of it in a _bowl of cold water_. _Strain_ and let to _dry on towels_. _Store lettuce_ in the _fridge_ in a _container_ with a _damp cloth over top_.
+  {{/recipe.ingredient}}
+
+  ![Another yummy salad](/assets/images/lessons/knife-skills/salad-4.jpg)
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Tomato') tagName='p'}}
+    __Tomato__—I’m no fan of tomatoes in salad. Most have _too much water_ content. Stick with _cherry tomatoes_. But if you’re using larger tomatoes, _remove_ the juicy _middle section_ (ideally to toss into a tomato sauce or beef stock, which we will get to in week 3).
+  {{/recipe.ingredient}}
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Kale') tagName='p'}}
+    __Kale__—There are _multiple species_ of kale on supermarket shelves — redbor, red Russian, curly, Siberian and cavolo nero (aka Tuscan or dinosaur kale). The _cavolo nero_ is terrific _raw_. But you’ve got to _massage it_ a little. Use your hands to _tear out_ the _centre rib_ from each leave. Then, working with _a few leaves_ at a time, _mash_ them _in your palms_ before slicing. The _pressure_ will _break down_ some of the _connective fibres_ of the plant, making them _easier to chew_. If your salad is _more kale_ than lettuce, consider _tossing_ in the dressing _15-20 minutes_ before serving.
+  {{/recipe.ingredient}}
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Carrot') tagName='p'}}
+    __Carrot__—Use a _cheese grater_ to _shred_ carrots. It’s _faster_ than _chopping_ and the _texture_ is great in a salad.
+  {{/recipe.ingredient}}
+
+  ![Let's just pretend this isn't a salad](/assets/images/lessons/knife-skills/salad-7.jpg)
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Cucumber') tagName='p'}}
+    __Cucumber__—Most of us have _been burned_ by trying to eat a _hard_, dry _pickling cucumber_. So when we see the variety of cucumbers in the aisle, we may be weary and default to the _English_, a perfectly _respectable cucumber_. But try the _more flavourful Persian_. _Before slicing_ the small cucumber, _bash it_ a bit with the _hilt of your knife_. This _softens_ it up and _releases_ its _juices_.
+  {{/recipe.ingredient}}
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Sprouts') tagName='p'}}
+    __Sprouts__—Sprouts are _yummy_, _crunchy_ and _good for you_. But they’re not very hearty once they’ve been harvested. Try to _use_ them _as soon as possible_.
+  {{/recipe.ingredient}}
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Beets') tagName='p'}}
+    __Beets__—Did you know you can eat _beets raw?_ Sometimes I _roast_ them for salad. But if you have a _food processor_, just _peel_ and _quarter_ them, then _pulse_ until they are the _size of gravel_. When adding to a salad, beets work better as _garnish_, as they tend to _turn everything pink_ if added to the mix.
+  {{/recipe.ingredient}}
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Nuts and seeds') tagName='p'}}
+    __Nuts and seeds__—Literally _any nut_ or _seed_ will give your salad _crunch_ and _protein_. I _premix_ a _big batch_ about _once a month_. Here’s my Method. On a _baking sheet_, _mix_ some _nuts_ and _seeds_ (I use almonds, cashews, pumpkin seeds and sunflower seeds) with _olive oil_, _honey_, _salt_ and _pepper_. _Bake_ at _300F_ until the kitchen _smells like nuts_, about _10 minutes_. _Remove_ from oven and _cool_ before storing in a _lidded container_.
+  {{/recipe.ingredient}}
+
+  ![Seriously, we used a lot of salad pics here](/assets/images/lessons/knife-skills/salad-8.jpg)
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Onions') tagName='p'}}
+    __Onions__—I’ve heard a lot of _wild theories_ on how to _avoid crying_ when _cutting onions_: light a candle, wear goggles, freeze, soak in cold water, hold bread in your mouth. They are all _nonsense_. There is, however, a _trick_ to quickly make _raw onions_ more _palatable_. _Before any other part_ of your salad, _slice_ your _onions_ and _soak_ them in _whatever acid_ you’re using _for dressing_. By the time you chop the rest of your vegetables, the onion will have _mellowed a bit_.
+  {{/recipe.ingredient}}
+
+  {{#recipe.ingredient (find recipe.raw.ingredients by='name' value='Cheese') tagName='p'}}
+    __Cheese__—It can seem like _a cheat_. Parents use cheese to get kids to eat vegetables. But used sparingly, a _crumbled tablespoon_ of _feta_ or _shaving_ of _parmesan_, adds a lot of dimension to a salad. In salad diplomacy, everything is open to negotiation if it gets the necessary parties to the table.
+  {{/recipe.ingredient}}
+{{/recipe-presenter}}
