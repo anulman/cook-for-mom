@@ -9,6 +9,9 @@ module.exports = function(environment) {
     locationType: 'router-scroll',
     historySupportMiddleware: true,
 
+    host: 'https://cookformom.com',
+    namespace: null,
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -73,6 +76,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
+    ENV.host = 'http://localhost:4200';
     ENV.sentry.development = true;
   }
 
