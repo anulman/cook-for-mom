@@ -39,7 +39,7 @@ module.exports = function(environment) {
       },
     }, {
       name: 'Segment',
-      environments: ['production'], // todo rm dev
+      environments: ['production'],
       config: {
         key: 'EXy2TUHuHBr6oYlb1XGUPjI8oLreZXS5'
       }
