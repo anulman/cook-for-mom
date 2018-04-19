@@ -1,0 +1,66 @@
+recipe_name: Braised Short Ribs
+recipe_uri: /recipes/braised-short-ribs
+oven_temp:
+  amount: 350
+  unit: F
+tools:
+  - tool: Oven proof pot
+    X-display_name: Oven-proof _pot_ with a lid
+  - tool: Storage container
+    X-display_name: _Storage_ container
+  - tool: Strainer
+    X-display_name: A _strainer_ to separate solids from liquids
+ingredients:
+  - ingredient: Beef short ribs
+    X-display_name: _Beef_ short ribs
+  - ingredient: Canola oil
+    X-display_name: Canola _oil_
+  - ingredient: Vegetable scraps
+    X-display_name: Vegetable _scraps_ (onion, garlic, carrot, celery)
+  - ingredient: Wine
+    amounts:
+      - amount: "A"
+        unit: "splash"
+    X-display_name: of _wine_
+  - ingredient: Beef stock
+    X-display_name: Beef _stock_ or water
+steps:
+  - step: Using an _oven-proof pot_—preferably one _with a lid_—begin by _searing_ the _short ribs_ on the stove, over _medium-high heat_, using a splash of _canola oil_.
+    notes:
+      - Just like you did the _chicken breasts_ last week, except this time _turn the beef_ as it _browns_ on _each side_.
+      - When you've browned _all the sides_, transfer meat to a plate.
+    X-image_url: /assets/images/lessons/slow-cooking/ribs-seared-800.jpg
+  - step: If you have _garlic_, _onion_, _carrot_ or _celery_ in your fridge, _add those_ to the _pot_ and _reduce the heat_.
+    notes:
+      - This is _not essential_, but it helps. _Stir occasionally_ until the _vegetables_ have _browned_, 5 to ten minutes.
+  - step: Now toss _whatever fresh herbs_ you've got into the pot, like _oregano_, _parsley_ or _thyme_.
+      - I'd _avoid adding rosemary_, as it can impart _bitter flavour_.
+  - step: If you want the _deglazing liquid_ to become a _gravy_, add a _fistful of flour_ to the vegetables now.
+    notes:
+      - If you'd rather leave it _thin_ to _use as a stock_ for soup, _skip the flour_.
+  - step: It's time to _deglaze the pot_.
+    notes:
+      - Use _wine_ if you've got it. _Scrape up_ those _bits of meat_ stuck to the bottom.
+    X-image_url: /assets/images/lessons/pan-roasting/deglazing-pan-800.jpg
+  - step: _Sprinkle_ a tiny bit of _salt_ over the _beef_, return it to the pot and _cover with liquid_; the liquid should _completely cover_ the meat.
+    notes:
+      - Use _water_, _wine_, the liquid from the _navy beans_ — whatever you have.
+      - For _8 bones worth_ of short rib, you'll need _about 2 litres_ of liquid. But it depends on _how wide your pot is_.
+  - step: _Raise the heat_ and _preheat the oven_ to _350F_ while the _pot_ comes to a _boil_ on the stovetop.
+  - step: Put a _lid_ on the pot (if it doesn't have one, use _aluminium foil_) and stick it in the oven.
+    notes:
+      - At this temperature, it'll take _about 2 hours_. I like going a little _lower and longer_, like _3 hours_ at _325F_, so there's _less chance_ of _accidentally overcooking_ (still delicious, over-braised meat will _break apart_ and you won't be able to serve it in one piece) or _reducing the liquid_ too much.
+      - When you check on the beef, _lift a piece out_ and _poke it_ with a knife. When the _knife slides in and out easily_, it's done.
+  - step: Leave the _beef_ in the _pot_ to cool.
+    notes:
+      - The meat will _retain more moisture_ if it _cools in the liquid_.
+  - step: When it's _close to room temperature_, place the _pot in the fridge_ to _cool overnight_.
+    notes:
+      - The _next day_, there will likely be a thick, light coloured _cap sealing the top of the liquid_. _Scoop it_ off the top, and _save it_ to use as you would _oil_ or _butter_. The _thicker_ the layer the _more easily_ it is removed.
+      - That is the _fat_ that has _rendered out_ of the _beef_. Before I wised up that this is _liquid gold_ (solid at fridge temperature), I used to throw it away. Don't. It has a _high smoking point_ and is _great for sautéing_ vegetables.
+    X-image_url: /assets/images/lessons/slow-cooking/girl-fridge-800.jpg
+    X-image_position: top
+  - step: Once you've separated the fat, _remove the beef_ from the liquid and _refrigerate_ in a _lidded container_.
+    notes:
+      - _Strain_ and _save_ the _liquid_ (now beef stock) and _discard_ any _vegetable solids_.
+  - step: Cut off a _slice of the beef_ and _taste it_. You made that!

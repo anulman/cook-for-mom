@@ -1,0 +1,18 @@
+recipe_name: Reheating Braised Short Ribs
+recipe_uri: /recipes/reheating-braised-short-ribs-1
+tools:
+  - tool: Oven proof pot
+    X-display_name: Oven-proof _pot_
+  - tool: Slotted spoon
+    X-display_name: Slotted _spoon_
+ingredients:
+  - ingredient: Braised beef short ribs
+    X-reference_recipe:
+      id: braised-short-ribs
+      type: recipes
+steps:
+  - step: Bring the braising liquid and the beef to a light simmer on the stove top.
+  - step: In about ten minutes the ribs will be warmed through.
+  - step: Use a slotted spoon to remove them and season with salt and pepper.
+    notes:
+      - While the bone should almost be falling off, it looks nice on the plate if you can keep it attached.

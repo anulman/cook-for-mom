@@ -1,0 +1,52 @@
+---
+title: "Reheating Braised Beef Short Ribs"
+slug: reheating-braised-short-ribs
+relationships:
+  recipes:
+    - id: reheating-braised-short-ribs-1
+      type: recipes
+    - id: reheating-braised-short-ribs-2
+      type: recipes
+---
+![A bowl of cooked short ribs](/assets/images/lessons/slow-cooking/ribs-bowl-800.jpg)
+
+There are _two good ways_ to _reheat_ and _serve_ these ribs. I’ll give you _both options_.
+
+### Method 1
+
+The easiest method is to warm up the ribs in their original broth.
+
+{{#recipe-presenter section.recipes.firstObject as |recipe|}}
+
+  <h4>Equipment</h4>
+
+  {{recipe.tools}}
+
+  <h4>Directions</h4>
+
+  {{recipe.steps}}
+
+{{/recipe-presenter}}
+
+---
+
+### Method 2
+
+Another method is to heat them in the oven.
+
+{{#recipe-presenter section.recipes.lastObject as |recipe|}}
+
+  <h4>Equipment</h4>
+
+  {{recipe.tools}}
+
+  <video autoplay controls playsinline loop muted poster='/assets/videos/lessons/slow-cooking/saltbae.png' class='d-block mr-auto ml-auto mt-4 mb-4'>
+    <source src='/assets/videos/lessons/slow-cooking/saltbae.webm' type='video/webm; codecs=vp9,vorbis'>
+    <source src='/assets/videos/lessons/slow-cooking/saltbae.mp4' type='video/mp4'>
+  </video>
+
+  <h4>Directions</h4>
+
+  {{recipe.steps}}
+
+{{/recipe-presenter}}

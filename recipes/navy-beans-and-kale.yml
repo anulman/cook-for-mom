@@ -1,0 +1,37 @@
+recipe_name: Navy Beans & Kale
+recipe_uri: /recipes/navy-beans-and-kale
+tools:
+  - tool: Pan
+    X-display_name: Large _pan_
+ingredients:
+  - ingredient: Oil
+    amounts:
+      - amount: 1
+        unit: tbsp
+    X-display_name: _butter_ or _oil_
+  - ingredient: Garlic
+    amounts:
+      - amount: 2
+        unit: cloves
+    X-display_name: _garlic_, finely _chopped_
+  - ingredient: Kale
+    amounts:
+      - amount: 1
+        unit: bunch
+    X-display_name: _cavolo nero_, aka _black kale_, aka _Tuscan kale_, aka _dinosaur kale_
+  - ingredient: Beans
+    amounts:
+      - amount: 2
+        unit: cups
+    X-display_name: cooked _navy beans_
+    X-reference_recipe:
+      id: cooked-beans
+      type: recipes
+  - ingredient: Salt and pepper
+    X-display_name: _Salt_ and _pepper_ to taste
+steps:
+  - step: Use a _paring knife_ to _remove the centre rib_ from _each kale leave_, or just _tear it_ with your hands, then _chop_ into _bite-sized pieces_.
+  - step: In a _large pan_ on _medium heat_, use _butter_ or _oil_ to _sauté garlic_ until fragrant, about 30 seconds.
+  - step: _Add kale_ and _stir until wilted_, a few minutes.
+  - step: _Add cooked beans_, stirring while they _warm through_.
+  - step: _Season to taste_ with salt and pepper.

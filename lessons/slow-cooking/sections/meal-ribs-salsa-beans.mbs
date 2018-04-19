@@ -1,0 +1,45 @@
+---
+title: "Meal: Braised Short Ribs with Pomegranate Salsa, Kale and Navy Beans"
+slug: meal-ribs-salsa-beans
+relationships:
+  recipes:
+    - id: pomegranate-salsa
+      type: recipes
+    - id: navy-beans-and-kale
+      type: recipes
+---
+![Braised Short Ribs with Pomegranate Salsa, Kale and Navy Beans](/assets/images/lessons/slow-cooking/meal-ribs-salsa-beans-800.jpg)
+
+Now that we've _mastered cooking_ with _dried beans_ and _braising_, we've learned how a _small amount of effort_, plus _patience_, can result in _big flavours_. And it's time to _put it all together_.
+
+Part of what I want you to get out of this is _how to prep a meal in advance_, particularly to _make hosting easier_. Rather than think of this as a _meal_ we're trying to get _on the table_ by _7 p.m. on a work night_, let's say we're _planning dinner_ for _Friday_. We've got _friends_ coming over _at 8_, which gives them time to hit the gym after work, shower and relax a bit before rushing to your home. And if we take this approach to _meal planning_, it will mean that we are _in no hurry_ on _Friday_ either.
+
+_Make the beans_ and _braise the short ribs_ early in the week. On Friday, you will have _all your major prep done_ and be able to _assemble _an impressive tasting meal with _minimal effort_.
+
+__Friday Night:__
+
+You've _just gotten home_ from work. _Guests_ are coming _at 8_. The _good news_ is that you've got _cooked beans_ and _braised meat_ sitting _in your fridge_, ready to be _heated_ and _finished_. So you can _take your time_ with the _fresh produce_ you'll need to _fill this out_ into a _balanced meal_.
+
+For _best results_, have your _beans/kale dish_ finished and your _pomegranate salsa_ ready _before you reheat_ your braise.
+
+### Pomegranate Salsa
+
+<img class='w-100' alt='Pomegranate salsa, yum!' src='/assets/images/lessons/slow-cooking/pomegranate-salsa-800.jpg' />
+
+{{recipe-presenter section.recipes.firstObject}}
+
+_Refrigerate_ until _dinnertime_.
+
+---
+
+### Navy Beans & Kale
+
+<img class='w-100' alt='Navy Beans & Kale' src='/assets/images/lessons/slow-cooking/kale-beans-800.jpg' />
+
+I’d make this one hour before dinner. As soon as it’s done, pull it off the stove and just reheat it when you’re ready to serve.
+
+{{recipe-presenter section.recipes.lastObject}}
+
+---
+
+Now reheat the braised beef ribs, using one of the methods described above. When your ribs are hot, assemble all the ingredients on a plate and serve.

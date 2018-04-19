@@ -1,0 +1,46 @@
+recipe_name: Beans with Tomatoes and Chillies
+recipe_uri: /recipes/beans-tomatoes-chillies
+tools:
+  - tool: Pan
+    X-display_name: _Pan_
+ingredients:
+  - ingredient: Cooked beans
+    amounts:
+      - amount: 2
+        unit: cups
+    X-reference_recipe:
+      id: deglazing-sauce
+      type: recipes
+    X-reference_target: "#on-cooking-beans"
+    notes:
+      - Navy, kidney or lima have a nice fleshy interior for this
+  - ingredient: Oil
+    X-display_name: A splash of _olive oil_ or spoonful of _butter_
+  - ingredient: Garlic
+    amounts:
+      - amount: 1
+        unit: clove
+    X-display_name: _garlic_, chopped
+  - ingredient: Chilli
+    amounts:
+      - amount: 1
+        unit: small
+    X-display_name: _chilli_, chopped, or pinch of _chilli powder_
+  - ingredient: Tomatoes
+    amounts:
+      - amount: 2
+    X-display_name: _tomatoes_, chopped
+  - ingredient: Salt and pepper
+  - ingredient: Cheese
+    X-display_name: Whatever _cheese_ is in your _fridge_
+    amounts:
+      - amount: A
+        unit: small fistful
+steps:
+  - step: In a _pan_ on _medium heat_, use _oil_ or _butter_ to _sauté garlic_ until fragrant, about 30 seconds.
+  - step: Add _chillies_ and _tomatoes_ and stir.
+    notes:
+      - If you've saved some _bean stock_, add a splash of that too.
+  - step: Let your mixture _simmer_ until the tomatoes have _broken down_ into a bit of a sauce, maybe 5 minutes.
+  - step: Add _beans_ and _mix_.
+  - step: _Season to taste_ with salt and pepper; _garnish_ with cheese.

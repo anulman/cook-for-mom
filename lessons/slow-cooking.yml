@@ -1,0 +1,65 @@
+title: "Slow Cooking: a Ribs & Beans Adventure"
+relationships:
+  highlights:
+    - id: slow-cooking/sections/what-is-braising
+      type: lessons/sections
+    - id: slow-cooking/sections/on-cooking-beans
+      type: lessons/sections
+    - id: slow-cooking/sections/recipe-braised-short-ribs
+      type: lessons/sections
+    - id: slow-cooking/sections/why-sourcing-matters
+      type: lessons/sections
+  sections:
+    - id: slow-cooking/sections/slow-cooking-fast-cooking
+      type: lessons/sections
+    - id: slow-cooking/sections/what-is-braising
+      type: lessons/sections
+    - id: slow-cooking/sections/on-cooking-beans
+      type: lessons/sections
+    - id: slow-cooking/sections/recipe-beans-tomatoes-chillies
+      type: lessons/sections
+    - id: slow-cooking/sections/why-sourcing-matters
+      type: lessons/sections
+    - id: slow-cooking/sections/recipe-braised-short-ribs
+      type: lessons/sections
+    - id: slow-cooking/sections/reheating-braised-short-ribs
+      type: lessons/sections
+    - id: slow-cooking/sections/meal-ribs-salsa-beans
+      type: lessons/sections
+    - id: slow-cooking/sections/basic-plating-theory
+      type: lessons/sections
+meta:
+  headTags:
+    - type: title
+      tagId: title
+      content: "Cook For Mom - Week 3: Slow Cooking: a Ribs & Beans Adventure"
+    - type: meta
+      tagId: meta-og-url
+      attrs:
+        property: og:url
+        content: https://cookformom.com/lessons/slow-cooking
+    - type: meta
+      tagId: meta-og-title
+      attrs:
+        property: og:title
+        content: "Slow Cooking: a Ribs & Beans Adventure"
+    - type: meta
+      tagId: meta-og-image
+      attrs:
+        property: og:image
+        content: https://cookformom.com/assets/images/lessons/slow-cooking/ribs-bowl-800.jpg
+    - type: meta
+      tagId: meta-og-image-alt
+      attrs:
+        property: og:image:alt
+        content: "Slow Cooking: a Ribs & Beans Adventure"
+    - type: meta
+      tagId: meta-og-description
+      attrs:
+        property: og:description
+        content: Learn the wonders of slow-cooking to reclaim time while your tasty food cooks itself.
+    - type: meta
+      tagId: meta-description
+      attrs:
+        name: description
+        content: Learn the wonders of slow-cooking to reclaim time while your tasty food cooks itself.

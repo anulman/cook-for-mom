@@ -1,0 +1,25 @@
+recipe_name: Pomegranate Salsa
+recipe_uri: /recipes/pomegranate-salsa
+ingredients:
+  - ingredient: Pomegranate
+    X-display_name: _Pomegranate_
+    amounts:
+      - amount: 1
+  - ingredient: Chilli
+    X-display_name: bird's eye _chilli_ (or chilli of your choice), finely _chopped_
+    amounts:
+      - amount: 1
+  - ingredient: Lime juice
+    X-display_name: _Juice_ of 1 _lime_
+  - ingredient: Cilantro
+    X-display_name: of chopped _cilantro_
+    amounts:
+      - amount: Fistful
+  - ingredient: Salt
+    X-display_name: _Salt_ to taste
+steps:
+  - step: Cut the _pomegranate_ in quarters.
+  - step: Over a _large bowl_ in your _sink_, use the _back of a spoon_ to _smack the skin_ of the _pomegranate_ and _dislodge the seeds_.
+    notes:
+      - Yes, this trick _actually works_. The _seeds_ should _fall out_ into the _bowl_, along with a _minor amount_ of white _membrane_, which you can pick up.
+  - step: Add _chilli_, _limejuice_, _cilantro_ and season to taste with _salt_.

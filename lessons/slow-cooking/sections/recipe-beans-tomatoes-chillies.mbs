@@ -1,0 +1,11 @@
+---
+title: "Recipe: Beans with Tomatoes and Chillies"
+slug: recipe-beans-tomatoes-chillies
+relationships:
+  recipes:
+    - id: beans-tomatoes-chillies
+      type: recipes
+---
+![Cooked beans](/assets/images/lessons/slow-cooking/beans-chillies-800.jpg)
+
+{{recipe-presenter section.recipes}}

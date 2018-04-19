@@ -1,0 +1,19 @@
+recipe_name: Reheating Braised Short Ribs
+recipe_uri: /recipes/reheating-braised-short-ribs-1
+oven_temp:
+  amount: 350
+  unit: F
+tools:
+  - tool: Oven proof pan
+    X-display_name: Oven-proof _pan_
+ingredients:
+  - ingredient: Braised beef short ribs
+    X-reference_recipe:
+      id: braised-short-ribs
+      type: recipes
+steps:
+  - step: For the best results I’d sprinkle the ribs with salt first.
+  - step: Place your ribs in a pan and warm them up at about 350F, then jack the oven to full blast (or a broiler setting if you have it) for a few minutes to finish.
+    notes:
+      - The first step will reheat and the second step will turn the surface a pleasing sticky texture. But you’ve got to stay on top of it to see that it doesn’t dry out.
+      - It’ll help to baste the meat with your reserved fat and/or stock. If you dust it with a bit of sugar or honey right before the broiling stage, the sugar will caramelize. But it’s a short distance between caramelization and burning. So watch it closely.

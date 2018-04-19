@@ -1,0 +1,27 @@
+recipe_name: Cooked Beans
+recipe_uri: /recipes/cooked-beans
+tools:
+  - tool: Large bowl
+    X-display_name: A _large bowl_, for soaking
+  - tool: Slotted spoon
+    X-display_name: Slotted _spoon_
+  - tool: Oven proof pot
+    X-display_name: Oven-proof _pot_ with a lid
+  - tool: Storage container
+ingredients:
+  - ingredient: Dried beans
+    X-display_name: Dried _beans_
+    notes:
+      - Use any kind you like!
+steps:
+  - step: To start, _soak_ your _dried beans_ in _water_.
+    notes:
+      - If you use _hot water_, they will be _ready sooner_, in an hour or two. If you use _cold water_, leave them _overnight_.
+      - You can even leave them soaking in water _for days_, though you'll need to _refrigerate the mixture_ and _change the water_ once a day.
+  - step: In the morning, _strain_ the beans; place them _in a pot_ and _cover_ them with _new_, lightly salted _water_.
+  - step: _Heat_ the _pot_ to a _gentle boil_, cook until the beans are _soft_, then strain.
+    notes:
+      - Watch that you _don't boil too hard_, as this makes beans _mushy_.
+      - As they cook, a bit of _foam_ may form on the _surface_ of the _water_. Just _scoop_ this away with a _slotted spoon_.
+      - The _cooking time_ will vary, less for _small beans_ (black, navy, cranberry) and more for _big beans_ (kidney, lima, chickpea). Depending on _how much water_ they've absorbed, you may be boiling your beans for anywhere from _15 minutes_ to _an hour_.
+      - _Lentils_, because they are _very small_, _do not_ require soaking.
