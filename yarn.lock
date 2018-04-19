@@ -3258,9 +3258,9 @@ ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.2, ember-cli-htmlbars@^2.0.3:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-hyde@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/ember-cli-hyde/-/ember-cli-hyde-0.2.3.tgz#69a0a40cca621a17288563d3258b0c456590aeca"
+ember-cli-hyde@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-hyde/-/ember-cli-hyde-0.2.4.tgz#607b806dab0f02ee20047a024e93565c5bf02717"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-hyde-compiler "~0.1.1"
