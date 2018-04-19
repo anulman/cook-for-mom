@@ -12,13 +12,19 @@
   {{/each}}
 {{else}}
   {{#each recipes as |recipe|}}
-    <h4>Equipment</h4>
-    {{component toolsComponent recipe.tools}}
+    {{#if recipe.tools}}
+      <h4>Equipment</h4>
+      {{component toolsComponent recipe.tools}}
+    {{/if}}
 
-    <h4>Ingredients</h4>
-    {{component ingredientsComponent recipe.ingredients}}
+    {{#if recipe.ingredients}}
+      <h4>Ingredients</h4>
+      {{component ingredientsComponent recipe.ingredients}}
+    {{/if}}
 
-    <h4>Directions</h4>
-    {{component stepsComponent recipe.steps}}
+    {{#if recipe.steps}}
+      <h4>Directions</h4>
+      {{component stepsComponent recipe.steps}}
+    {{/if}}
   {{/each}}
 {{/if}}
