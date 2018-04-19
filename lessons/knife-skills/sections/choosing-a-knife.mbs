@@ -11,9 +11,9 @@ _Go to a store_ where you can hold a variety of knives. Don’t get obsessed wit
 What _matters most_ is that a knife _feels right_ in your hand and _is sharp_. The adage is true: a _dull knife_ is _more likely_ to _cut you_ than a sharp one. Because a sharp knife does what you ask of it, like slicing through a beet. A dull knife meets _resistance_. It forces you to apply _too much pressure_, increasing the chances of _slipping_ and driving the blade into _your hand_.
 
 <blockquote>
-  Does _sharpening_ your knife sound _daunting_? We know how you feel. We can't all be _Gordon Ramsay_!
+  {{markdown-fragment "Does _sharpening_ your knife sound _daunting_? We know how you feel. We can't all be _Gordon Ramsay_!"}}
 
   {{youtube-player 'SBn1i9YqN1k'}}
 
-  Have no fear! _The Wirecutter_ has a fantastic article that can help you find <a href='https://thewirecutter.com/reviews/best-knife-sharpening-tool/' target='_blank'>The Best Knife Sharpening Tool</a> for you. TL;DR: it's probably the <a onclick={{action trackAffiliate 'amazon' 'knife-sharpener'}} href='https://www.amazon.com/gp/product/B007IVBET0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007IVBET0&linkCode=as2&tag=cookformom-20&linkId=c66061539061b61b5beaca5e3520e124' target='_blank'>ChefsChoice ProntoPro 4643</a>.
+  {{markdown-fragment "Have no fear! _The Wirecutter_ has a fantastic article that can help you find <a href='https://thewirecutter.com/reviews/best-knife-sharpening-tool/' target='_blank'>The Best Knife Sharpening Tool</a> for you. TL;DR: it's probably the <a onclick={{action trackAffiliate 'amazon' 'knife-sharpener'}} href='https://www.amazon.com/gp/product/B007IVBET0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B007IVBET0&linkCode=as2&tag=cookformom-20&linkId=c66061539061b61b5beaca5e3520e124' target='_blank'>ChefsChoice ProntoPro 4643</a>."}}
 </blockquote>
