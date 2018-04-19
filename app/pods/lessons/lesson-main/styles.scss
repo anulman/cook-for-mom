@@ -1,0 +1,23 @@
+& {
+  padding-bottom: 5rem;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
+}
+
+> .container {
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+
+    > .row > main {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+h4 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}

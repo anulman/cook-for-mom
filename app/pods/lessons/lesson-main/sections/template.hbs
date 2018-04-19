@@ -1,0 +1,8 @@
+{{#each sections as |section|}}
+  {{#component sectionComponent section
+    titleComponent=titleComponent
+    contentComponent=contentComponent
+    fetchLayout=fetchLayout as |section|}}
+    {{yield section}}
+  {{/component}}
+{{/each}}

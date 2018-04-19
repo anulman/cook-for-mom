@@ -1,6 +1,14 @@
 import Component from '@ember/component';
 
-export default Component.extend({
+const LeadComponent = Component.extend({
   tagName: 'p',
-  classNames: ['lead']
+  classNames: ['lead'],
+
+  text: null
 });
+
+LeadComponent.reopenClass({
+  positionalParams: ['text']
+});
+
+export default LeadComponent;

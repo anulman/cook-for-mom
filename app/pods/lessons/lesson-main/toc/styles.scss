@@ -1,0 +1,55 @@
+& {
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
+
+  top: $nav-height + 1rem;
+  font-size: 1rem;
+
+  @include media-breakpoint-down(sm) {
+    height: $nav-height;
+
+    top: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    z-index: 20;
+  }
+}
+
+a {
+  color: $body-color;
+  font-weight: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.info--content {
+  opacity: .5;
+  max-height: calc(100vh - var(--nav-height) - 5rem);
+  overflow-y: auto;
+
+  @include media-breakpoint-down(sm) {
+    opacity: 1;
+    overflow-y: hidden;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    padding: 0;
+
+    background: lighten($color-khaki, 25%);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.highlight {
+  font-weight: 400;
+}

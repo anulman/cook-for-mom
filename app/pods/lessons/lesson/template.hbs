@@ -1,41 +1,58 @@
-{{#lessons/section-header as |header|}}
-  {{#header.info.title}} {{model.title}} {{/header.info.title}}
-  {{#header.info.lead}} In this lesson, we will learn... {{/header.info.lead}}
+{{#lessons/lesson-header (readonly model) as |header|}}
+  {{header.title}}
+  {{header.subtitle}}
 
+  {{#header.highlights class='row' as |highlights|}}
+    {{highlights.cards class='col-md-7 p-relative d-flex flex-column'}}
+
+    {{#header.body tagName='div' class='col-md-5 d-none d-md-block'}}
+      {{highlights.list tagName='ul' class='pl-0 d-flex flex-column justify-content-between'}}
+    {{/header.body}}
+  {{/header.highlights}}
+{{/lessons/lesson-header}}
+
+{{#lessons/lesson-main (readonly model) as |lesson|}}
   <div class='row'>
-    {{header.cards model.sections.highlights class='col-md-7 p-relative d-flex flex-column'}}
-    {{#header.info.content tagName='div' class='col-md-5 d-none d-md-block'}}
-      {{header.list model.sections.highlights tagName='ul' class='pl-0 d-flex flex-column justify-content-between'}}
-    {{/header.info.content}}
-  </div>
-{{/lessons/section-header}}
+    {{#lesson.toc tagName='aside' class='col-md-4' as |toc|}}
+      {{toc.title class='d-none d-md-block'}}
+      {{#toc.body tagName='ul' class='nav text-right'}}
+        {{#each model.sections as |section|}}
+          {{toc.item (concat '#' section.slug) section.title
+            tagName='li'
+            class=(concat 'nav-item' (if (includes model.highlights section) ' highlight'))
+            linkClass='nav-link'}}
+        {{/each}}
+      {{/toc.body}}
+    {{/lesson.toc}}
 
-{{#lessons/section-main model.sections as |main|}}
-  <div class='row'>
-    <aside class='col-md-4'>
-      {{#main.info.lead class='d-none d-md-block'}} Table of Contents {{/main.info.lead}}
-      {{#main.info.content tagName='ul' class='nav text-right'}}
-        {{main.toc model.sections tagName=''}}
-      {{/main.info.content}}
-    </aside>
+    {{#lesson.sections tagName='main' class='col-md-8' as |section|}}
+      {{section.anchor}}
+      {{section.title}}
 
-    <main class='col-md-8'>
-      {{#each model.sections as |section|}}
-        {{#main.section section}}
-          {{#main.info.lead}} {{section.title}} {{/main.info.lead}}
-          {{#with (async-layout/fetch
-            (join 'lessons' model.id 'sections' section.slug by='/')
-            suffix='/compiled/ember.json') as |layout|}}
-            {{#main.info.content tagName='div' class=(if layout.isPending 'is-loading')}}
-              {{#if layout.isFulfilled}}
-                {{async-layout layout.content
-                  trackAffiliate=(action lessons.application.trackAffiliate lessons.application)
-                  nudge=(action lessons.application.nudge lessons.application)}}
-              {{/if}}
-            {{/main.info.content}}
-          {{/with}}
-        {{/main.section}}
-      {{/each}}
-    </main>
+      {{#section.body tagName='div'}}
+        {{#if section.isLocked}}
+          todo signup form
+        {{else if section.layoutFetcher.isRunning}}
+          <div class='mt-4 pt-4 mb-4 pb-4'>
+            {{loading-spinner}}
+          </div>
+        {{else if section.layoutFetcher.isSuccessful}}
+          {{async-layout section.layoutFetcher.value
+            section=section
+            trackAffiliate=(action lessons.application.trackAffiliate lessons.application)
+            nudge=(action lessons.application.nudge lessons.application)}}
+        {{else}}
+          <p class='text-center'>
+            An error has occurred; please try reloading the page. We have been alerted, and would appreciate any further feedback at chef@cookformom.com.
+          </p>
+
+          {{#if section.layoutFetcher.error}}
+            <p class='small text-center'>
+              Reason: {{section.layoutFetcher.error}}
+            </p>
+          {{/if}}
+        {{/if}}
+      {{/section.body}}
+    {{/lesson.sections}}
   </div>
-{{/lessons/section-main}}
+{{/lessons/lesson-main}}

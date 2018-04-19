@@ -12,7 +12,7 @@
         <img class='card-img-top' src='{{section.imageUrl}}'>
       {{/if}}
     <div class='card-body d-md-none'>
-      <p class='card-text text-center'> {{html-safe section.description}} </p>
+      <p class='card-text text-center'> {{markdown-fragment section.description}} </p>
     </div>
   </a>
 {{/each}}

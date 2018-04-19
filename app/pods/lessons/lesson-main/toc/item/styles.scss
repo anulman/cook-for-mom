@@ -1,0 +1,29 @@
+& {
+  padding: 0;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0.5rem 0;
+    width: auto;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  + li {
+    margin-top: .5rem;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+    }
+  }
+}
+
+&.active {
+  text-decoration: underline;
+
+  a {
+    text-decoration: inherit;
+  }
+}

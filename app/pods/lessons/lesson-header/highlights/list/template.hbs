@@ -3,7 +3,7 @@
     onmouseover={{action activate section}}
     onmouseout={{action deactivate section}}>
     <a href='#{{section.slug}}'>
-      {{html-safe section.description}}
+      {{markdown-fragment section.description}}
     </a>
   </li>
 {{/each}}

@@ -1,0 +1,8 @@
+{{#section-info class=styleNamespace as |info|}}
+  {{yield (hash
+    title=(component info.title lesson.title)
+    subtitle=(component info.lead 'In this lesson, we will learn...')
+    body=(component info.content)
+    highlights=(component highlightsComponent lesson.highlights)
+  )}}
+{{/section-info}}

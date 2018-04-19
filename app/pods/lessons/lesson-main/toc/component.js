@@ -1,12 +1,12 @@
 import Component from '@ember/component';
 import { bind, once } from '@ember/runloop';
 
-const ContentSection = Component.extend({
-  tagName: '',
+const TocComponent = Component.extend({
+  classNames: ['toc'],
 
-  sections: null, // is array
-  tocComponent: 'lessons/section-main/toc',
-  sectionComponent: 'lessons/section-main/section',
+  sections: null,
+
+  itemComponent: 'lessons/lesson-main/toc/item',
 
   didInsertElement() {
     setActiveAnchor.call(this);
@@ -38,16 +38,19 @@ const ContentSection = Component.extend({
   }
 });
 
-ContentSection.reopenClass({
+TocComponent.reopenClass({
   positionalParams: ['sections']
 });
 
-export default ContentSection;
+export default TocComponent;
 
 function setActiveAnchor() {
-  let element = this.childViews[0].element;
-  let sections = Array.from(element.querySelectorAll('a.anchor'));
-  let anchorLinks = element.querySelectorAll('aside a');
+  let ids = this.get('sections')
+    .map((section) => `#${section.get('slug')}`)
+    .join(',');
+
+  let sections = Array.from(document.querySelectorAll(ids));
+  let anchorLinks = this.element.querySelectorAll('.toc__item');
   let minTop = window.innerHeight / 2;
 
   // n.b. `reverse` reverses the array in place, so we count down
@@ -56,7 +59,7 @@ function setActiveAnchor() {
 
   anchorLinks.forEach((elem, index) => {
     if (index === firstVisibleIndex) {
-      if (elem !== element.querySelector('.active')) {
+      if (elem !== this.element.querySelector('.active')) {
         scrollToElem.call(this, elem);
       }
 
@@ -68,7 +71,7 @@ function setActiveAnchor() {
 }
 
 function scrollToElem(elem) {
-  let element = this.childViews[0].element;
+  let element = this.element;
   let navElem = element.querySelector('.nav');
   let { right: ulRight } = navElem.getBoundingClientRect();
   let { left, right } = elem.getBoundingClientRect();

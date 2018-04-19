@@ -1,11 +1,14 @@
 import Component from '@ember/component';
 
 const TocComponent = Component.extend({
-  sections: null // is array
+  classNames: ['toc__item'],
+
+  href: null,
+  title: null
 });
 
 TocComponent.reopenClass({
-  positionalParams: ['sections']
+  positionalParams: ['href', 'title']
 });
 
 export default TocComponent;

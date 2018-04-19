@@ -1,0 +1,13 @@
+{{#section-info class=styleNamespace as |info|}}
+  {{yield (hash
+    toc=(component tocComponent lesson.sections
+      titleComponent=info.lead
+      contentComponent=info.content
+    )
+    sections=(component sectionsComponent lesson.sections
+      titleComponent=info.lead
+      contentComponent=info.content
+      fetchLayout=fetchLayout
+    )
+  )}}
+{{/section-info}}

@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { alias } from '@ember/object/computed';
 
-import Activatable from '../../../../mixins/activatable';
+import Activatable from '../../../../../mixins/activatable';
 
 const CardsComponent = Component.extend(Activatable, {
   highlights: null, // is array
