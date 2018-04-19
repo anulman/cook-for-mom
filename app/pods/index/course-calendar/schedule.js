@@ -6,7 +6,7 @@ export const LESSONS = [{
   description: '<em>Knife skills</em>, including <em>chopping</em>, <em>dicing</em>, and basic safety'
 }, {
   slug: 'pan-roasting',
-  title: 'Week 2: Cooking Proteins',
+  title: 'Week 2: Proteins & Pan-Roasting',
   description: '3 common techniques for cooking proteins like <em>fish</em>, <em>chicken</em>, and <em>tofu</em>'
 }, {
   slug: 'how-to-shop',
