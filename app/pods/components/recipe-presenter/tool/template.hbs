@@ -1,0 +1,9 @@
+{{#if hasBlock}}
+  {{yield}}
+{{else}}
+  {{markdown-fragment tool.name}}
+
+  {{#if tool.notes}}
+    {{component notesComponent tool.notes}}
+  {{/if}}
+{{/if}}

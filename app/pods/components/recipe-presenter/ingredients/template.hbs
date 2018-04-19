@@ -1,0 +1,12 @@
+{{#if hasBlock}}
+  {{#each ingredients as |ingredient|}}
+    {{yield (hash
+      raw=ingredient
+      ingredient=(component ingredientComponent ingredient notesComponent=notesComponent)
+    )}}
+  {{/each}}
+{{else}}
+  {{#each ingredients as |ingredient|}}
+    {{component ingredientComponent ingredient notesComponent=notesComponent}}
+  {{/each}}
+{{/if}}

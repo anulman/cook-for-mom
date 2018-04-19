@@ -1,0 +1,17 @@
+{{#if hasBlock}}
+  {{yield}}
+{{else}}
+  {{#if (and step.imageUrl (eq step.imagePosition 'top'))}}
+    <img src={{step.imageUrl}}>
+  {{/if}}
+
+  {{markdown-fragment step.step}}
+
+  {{#if step.notes}}
+    {{component notesComponent step.notes}}
+  {{/if}}
+
+  {{#if (and step.imageUrl (not (eq step.imagePosition 'top')))}}
+    <img src={{step.imageUrl}}>
+  {{/if}}
+{{/if}}

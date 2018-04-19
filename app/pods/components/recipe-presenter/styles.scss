@@ -1,0 +1,32 @@
+> ul:not(.recipe-presenter__steps),
+> ul.recipe-presenter__steps ul.recipe-presenter__notes {
+  border-left: 4px transparentize($primary, 0.2) solid;
+
+  button.btn {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 2rem;
+  }
+}
+
+> ul.recipe-presenter__steps,
+> ul.recipe-presenter__steps ul.recipe-presenter__notes {
+  list-style: none;
+
+  > :not(:first-child),
+  > li > * {
+    margin-top: 1.5rem;
+  }
+}
+
+> ul.recipe-presenter__steps {
+  padding-left: 0;
+}
+
+> ul.recipe-presenter__steps ul.recipe-presenter__notes {
+  padding-left: 2rem;
+  font-size: .9rem;
+  line-height: 1.5rem;
+}

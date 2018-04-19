@@ -1,0 +1,12 @@
+{{#if hasBlock}}
+  {{#each steps as |step|}}
+    {{yield (hash
+      raw=step
+      step=(component stepComponent step notesComponent=notesComponent)
+    )}}
+  {{/each}}
+{{else}}
+  {{#each steps as |step|}}
+    {{component stepComponent step notesComponent=notesComponent}}
+  {{/each}}
+{{/if}}

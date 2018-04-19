@@ -1,0 +1,12 @@
+{{#if hasBlock}}
+  {{#each notes as |note|}}
+    {{yield (hash
+      raw=note
+      note=(component noteComponent note)
+    )}}
+  {{/each}}
+{{else}}
+  {{#each notes as |note|}}
+    {{component noteComponent note}}
+  {{/each}}
+{{/if}}

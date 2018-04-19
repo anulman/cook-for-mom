@@ -1,0 +1,19 @@
+{{#if hasBlock}}
+  {{yield}}
+{{else}}
+  {{#if ingredient.referenceTarget}}
+    <a href={{ingredient.referenceTarget}}>
+      {{markdown-fragment ingredient.name}}
+    </a>
+  {{else}}
+    {{markdown-fragment ingredient.name}}
+  {{/if}}
+
+  {{#with ingredient.referenceRecipe as |recipe|}}
+    {{component notesComponent (map recipe.ingredients by='name')}}
+  {{/with}}
+
+  {{#if ingredient.notes}}
+    {{component notesComponent ingredient.notes}}
+  {{/if}}
+{{/if}}

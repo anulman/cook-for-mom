@@ -1,0 +1,24 @@
+{{#if hasBlock}}
+  {{#each recipes as |recipe|}}
+    {{yield (hash
+      raw=recipe
+      ingredient=(component ingredientComponent)
+      ingredients=(component ingredientsComponent recipe.ingredients)
+      step=(component stepComponent)
+      steps=(component stepsComponent recipe.steps)
+      tool=(component toolComponent)
+      tools=(component toolsComponent recipe.tools)
+    )}}
+  {{/each}}
+{{else}}
+  {{#each recipes as |recipe|}}
+    <h4>Equipment</h4>
+    {{component toolsComponent recipe.tools}}
+
+    <h4>Ingredients</h4>
+    {{component ingredientsComponent recipe.ingredients}}
+
+    <h4>Directions</h4>
+    {{component stepsComponent recipe.steps}}
+  {{/each}}
+{{/if}}
