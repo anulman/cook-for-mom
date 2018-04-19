@@ -38,7 +38,7 @@
           </div>
         {{else if section.layoutFetcher.isSuccessful}}
           {{async-layout section.layoutFetcher.value
-            section=section
+            section=section.raw
             trackAffiliate=(action lessons.application.trackAffiliate lessons.application)
             nudge=(action lessons.application.nudge lessons.application)}}
         {{else}}
