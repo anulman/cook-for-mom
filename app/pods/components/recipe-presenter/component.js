@@ -1,12 +1,16 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
+import { isArray } from '@ember/array';
 
 const RecipePresenter = Component.extend({
   classNames: ['recipe-presenter'],
 
   recipe: null,
   recipes: computed('recipe', function() {
-    return [this.get('recipe')].compact();
+    let recipe = this.get('recipe');
+    let recipes = isArray(recipe) ? recipe : [recipe];
+
+    return recipes.compact();
   }),
 
   ingredientComponent: 'recipe-presenter/ingredient',
@@ -20,7 +24,7 @@ const RecipePresenter = Component.extend({
 });
 
 RecipePresenter.reopenClass({
-  positionalParams: ['recipes']
+  positionalParams: ['recipe']
 });
 
 export default RecipePresenter;
