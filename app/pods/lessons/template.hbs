@@ -1,13 +1,18 @@
 {{#nav-bar as |nav|}}
   {{#nav.items as |items|}}
-    {{items.link-to 'Home' 'index'}}
-    {{#items.link-to 'Week 1' 'lessons.lesson' 'knife-skills'}}
-      {{#bs-tooltip}} Knife Skills {{/bs-tooltip}}
-    {{/items.link-to}}
+    {{#items.item}}
+      {{link-to 'Home' 'index' class='nav-link'}}
+    {{/items.item}}
 
-    {{#items.link-to 'Week 2' 'lessons.lesson' 'pan-roasting'}}
+    {{#items.item}}
+      {{link-to 'Week 1' 'lessons.lesson' 'knife-skills' class='nav-link'}}
+      {{#bs-tooltip}} Knife Skills {{/bs-tooltip}}
+    {{/items.item}}
+
+    {{#items.item}}
+      {{link-to 'Week 2' 'lessons.lesson' 'pan-roasting' class='nav-link'}}
       {{#bs-tooltip}} Proteins & Pan-Roasting {{/bs-tooltip}}
-    {{/items.link-to}}
+    {{/items.item}}
 
     {{#items.item 'Week 3' disabled=true}}
       {{#bs-tooltip}} How to Shop {{/bs-tooltip}}
