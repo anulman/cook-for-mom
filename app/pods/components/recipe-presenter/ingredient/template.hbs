@@ -1,6 +1,10 @@
 {{#if hasBlock}}
   {{yield}}
 {{else}}
+  {{#with ingredient.amounts.firstObject as |amount|}}
+    {{amount.amount}} {{amount.unit}}
+  {{/with}}
+
   {{#if ingredient.referenceTarget}}
     <a href={{ingredient.referenceTarget}}>
       {{markdown-fragment ingredient.name}}

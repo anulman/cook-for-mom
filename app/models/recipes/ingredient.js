@@ -6,6 +6,7 @@ const { Model, attr, belongsTo } = DS;
 export default Model.extend({
   ingredient: attr('string'),
   displayName: attr('string'),
+  amounts: attr(), // is array of objects { amount, unit }
   notes: attr(), // is array of strings
 
   recipe: belongsTo('recipe'),
