@@ -19,6 +19,10 @@
   > li > * {
     margin-top: 1.5rem;
   }
+
+  > li > :first-child {
+    margin-bottom: 1.5rem;
+  }
 }
 
 > ul.recipe-presenter__steps {
