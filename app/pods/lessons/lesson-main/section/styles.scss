@@ -7,10 +7,10 @@
 }
 
 .w-100 {
-  margin-left: -2rem;
+  margin-left: -2rem !important;
 
   width: calc(100% + 4rem) !important;
-  max-width: calc(100% + 4rem);
+  max-width: calc(100% + 4rem) !important;
 }
 
 img:not(.img-fixed) {
