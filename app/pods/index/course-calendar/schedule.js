@@ -9,8 +9,8 @@ export const LESSONS = [{
   title: 'Week 2: Proteins & Pan-Roasting',
   description: '3 common techniques for cooking proteins like <em>fish</em>, <em>chicken</em>, and <em>tofu</em>'
 }, {
-  slug: 'how-to-shop',
-  title: 'Week 3: How to Shop',
+  slug: 'slow-cooking',
+  title: 'Week 3: Braising & Slow-Cooking',
   description: 'Where, how, and why to <em>shop</em> for the <em>best ingredients</em> you can get'
 }, {
   slug: 'continuous-kitchen',
@@ -33,7 +33,7 @@ export const DATES = [
   { date: '04-09', type: 'lesson', value: findLesson('pan-roasting') },
     { date: '04-12', type: 'activity', value: 1 },
     { date: '04-14', type: 'activity', value: 2 },
-  { date: '04-16', type: 'lesson', value: findLesson('how-to-shop') },
+  { date: '04-16', type: 'lesson', value: findLesson('slow-cooking') },
     { date: '04-19', type: 'activity', value: 1 },
     { date: '04-20', type: 'activity', value: 1 },
     { date: '04-21', type: 'activity', value: 2 },
