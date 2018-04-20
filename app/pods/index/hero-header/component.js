@@ -13,7 +13,7 @@ export default Component.extend({
   onFormVisibilityChange() {},
 
   isFormShowing: true,
-  isFormFloating: false,
+  isFormFloating: true,
 
   didInsertElement() {
     if (typeof FastBoot === 'undefined') {
@@ -50,5 +50,9 @@ export default Component.extend({
 });
 
 function computeWindowSize() {
-  this.set('isFormFloating', window.innerWidth >= BREAKPOINTS.md);
+  let isFormFloating = typeof FastBoot === 'undefined' ?
+    window.innerWidth >= BREAKPOINTS.md :
+    true;
+
+  this.set('isFormFloating', isFormFloating);
 }
