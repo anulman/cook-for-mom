@@ -4,6 +4,7 @@
     "ember-addon"
   ],
   "ember-addon": {
-    "before": ["ember-cli-hyde"]
+    "before": ["prember"],
+    "after": ["ember-cli-hyde"]
   }
 }
