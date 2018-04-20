@@ -1,7 +1,6 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const stew = require('broccoli-stew');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -23,7 +22,8 @@ module.exports = function(defaults) {
       urls: [
         '/',
         '/lessons/knife-skills',
-        '/lessons/pan-roasting'
+        '/lessons/pan-roasting',
+        '/lessons/slow-cooking'
       ]
     },
     sourcemaps: {
@@ -34,5 +34,5 @@ module.exports = function(defaults) {
   app.import('node_modules/firebase/firebase.js');
   app.import('node_modules/firebase/firebase-firestore.js');
 
-  return stew.mv(app.toTree(), 'hyde/', 'static/');
+  return app.toTree();
 };
