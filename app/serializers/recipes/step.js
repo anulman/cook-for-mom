@@ -5,6 +5,7 @@ export default Base.extend({
   attrs: {
     step: 'step',
     notes: 'notes',
-    imageUrl: 'image-url'
+    imageUrl: 'image-url',
+    imagePosition: 'image-position'
   }
 });
