@@ -35,6 +35,7 @@ program
             tasks.push(encodeImage(inputPath, options));
             break;
           case '.mov':
+          case '.mp4':
             tasks.push(encodeMov(inputPath, options));
             break;
         }
@@ -75,18 +76,19 @@ function encodeImage(inputPath, options) {
 }
 
 function encodeMov(inputPath, options) {
-  let name = path.basename(inputPath, path.extname(inputPath));
+  let ext = path.extname(inputPath);
+  let name = path.basename(inputPath, ext);
   let outputDir = options.outputDir || path.dirname(inputPath);
   let outputName = path.join(outputDir, name);
   let width = options.width || 640;
 
-  let mp4Path = `${outputName}.mp4`;
+  let mp4Path = ext === '.mp4' ? inputPath : `${outputName}.mp4`;
   let webmPath = `${outputName}.webm`;
   let posterPath = `${outputName}.png`;
   let gifPath = `${outputName}.gif`;
 
   /* eslint-disable max-len */
-  if (!fs.existsSync(mp4Path) || options.force) {
+  if (ext !== '.mp4' && (!fs.existsSync(mp4Path) || options.force)) {
     runCommand(`ffmpeg -y -i ${inputPath} -vf scale=${width}:-1 -crf 18 -preset veryslow -vcodec libx264 -pix_fmt yuv420p -profile:v baseline -level 3 -an -sn -dn ${mp4Path}`);
   }
 
