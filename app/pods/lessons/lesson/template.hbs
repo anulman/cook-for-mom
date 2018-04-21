@@ -30,7 +30,7 @@
       {{section.title}}
 
       {{#section.body tagName='div'}}
-        {{#if (and section.raw.isLocked (not lessons.application.didSubmit))}}
+        {{#if (and section.raw.isLocked (not lessons.application.isSubscriber))}}
           {{lessons/lesson/signup-form
             email=lessons.application.email
             validations=lessons.application.validations

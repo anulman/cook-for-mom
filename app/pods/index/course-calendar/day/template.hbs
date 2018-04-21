@@ -15,7 +15,7 @@
     {{bs-tooltip title=specialDay.value}}
   {{/if}}
 {{else if day.isToday}}
-  {{bs-tooltip title=(if didSubmit
+  {{bs-tooltip title=(if isSubscriber
     'Meal plan acquired! Click here to follow & share.'
     'Click here to sign up now and get a free meal plan today!'
   )}}

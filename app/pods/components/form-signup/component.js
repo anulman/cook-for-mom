@@ -10,7 +10,7 @@ export default Component.extend({
 
   isMobile: service(),
 
-  didSubmit: false,
+  isSubscriber: false,
   didReset: false,
   shouldFocusInput: not('isMobile.any'),
 
@@ -61,8 +61,8 @@ export default Component.extend({
     this._viewportListener = null;
   },
 
-  isSubmitted: computed('didSubmit', 'didReset', function() {
-    return this.get('didSubmit') && !this.get('didReset');
+  isSubmitted: computed('isSubscriber', 'didReset', function() {
+    return this.get('isSubscriber') && !this.get('didReset');
   }),
 
   keydown(event) {

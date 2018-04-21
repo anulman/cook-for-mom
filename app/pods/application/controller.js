@@ -25,14 +25,6 @@ export default Controller.extend(Validations, {
   fingerprint: null, // n.b. set on init
   canNudgeUser: false,
   isSubscriber: computed('fingerprintjs.fingerprint.result', isSubscriber),
-  didSubmit: computed('isSubscriber.exists', function() {
-    if (typeof FastBoot !== 'undefined') {
-      return false;
-    }
-
-    return this.get('isSubscriber.isFulfilled') &&
-      this.get('isSubscriber.exists')
-  }),
 
   isNudging: null, // is object
   _nudgesRequested: null, // is array
@@ -84,7 +76,7 @@ export default Controller.extend(Validations, {
       source
     });
 
-    application.set('didSubmit', true);
+    application.set('isSubscriber', true);
     application.get('firebase').firestore()
       .collection('signups')
       .doc(application.get('fingerprintjs.fingerprint.result'))

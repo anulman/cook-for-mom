@@ -1,7 +1,7 @@
 {{index/hero-header
   email=application.email
   validations=application.validations
-  didSubmit=(readonly application.didSubmit)
+  isSubscriber=(readonly application.isSubscriber)
   onInput=(action (mut application.email))
   onSubmit=(action application.onEmailSubmitted application application.email 'hero')
   onFormVisibilityChange=(action (mut isHeroFormShowing))}}
@@ -29,7 +29,7 @@
     {{nav-bar/signup-cta
       email=application.email
       validations=application.validations
-      didSubmit=application.didSubmit
+      isSubscriber=application.isSubscriber
       isNudging=application.isNudging
       onInput=(action (mut application.email))
       onSubmit=(action application.onEmailSubmitted application application.email 'nav')
@@ -135,7 +135,7 @@
           maxDate=calendar.schedule.maxDate
           dayIsDisabled=calendar.schedule.isDayDisabled as |day|}}
           {{index/course-calendar/day calendar day
-            didSubmit=(readonly application.didSubmit)
+            isSubscriber=(readonly application.isSubscriber)
             nudgeSignup=(action application.nudge application 'calendar' 'click-today')}}
         {{/power.days}}
       {{/power-calendar}}

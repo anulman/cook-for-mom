@@ -8,7 +8,7 @@ export default Component.extend({
 
   isMobile: service(),
 
-  didSubmit: false,
+  isSubscriber: false,
   onSubmit() {},
   onFormVisibilityChange() {},
 

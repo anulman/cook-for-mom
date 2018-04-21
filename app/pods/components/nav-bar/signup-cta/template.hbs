@@ -1,6 +1,6 @@
 <button type='button'
   class='btn btn-outline-primary {{if isNudging 'bg-none text-dark' 'bg-primary text-white'}}'>
-  {{unless didSubmit 'Sign up today!' 'Follow & Share'}}
+  {{unless isSubscriber 'Sign up today!' 'Follow & Share'}}
 </button>
 
 {{#bs-tooltip
@@ -9,7 +9,7 @@
   layout='bs-tooltip'
   onHidden=(action cancelNudge) as |tooltip|}}
   {{#form-signup
-    didSubmit=didSubmit
+    isSubscriber=isSubscriber
     shouldFocusInput=isNudging
     onSubmit=(action onSubmit) as |form|}}
     {{#form.header}}

@@ -11,7 +11,7 @@
 
 {{#ember-wormhole to='hero-form-container' renderInPlace=(not isFormFloating)}}
   {{#form-signup
-    didSubmit=didSubmit
+    isSubscriber=isSubscriber
     onSubmit=(action onSubmit)
     onViewportEntered=(action onFormVisibilityChange true)
     onViewportExited=(action onFormVisibilityChange false) as |form|}}
