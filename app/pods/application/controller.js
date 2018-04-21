@@ -1,15 +1,13 @@
 import Controller from '@ember/controller';
-import ObjectProxy from '@ember/object/proxy';
-import PromiseProxyMixin from '@ember/object/promise-proxy-mixin';
 
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { isBlank } from '@ember/utils';
 
 import md5 from 'md5';
+import { task } from 'ember-concurrency';
 import { validator, buildValidations } from 'ember-cp-validations';
 
-const ObjectPromiseProxy = ObjectProxy.extend(PromiseProxyMixin);
 const Validations = buildValidations({
   email: [
     validator('presence', true),
@@ -116,21 +114,30 @@ export default Controller.extend(Validations, {
       event: 'clickedSocial',
       platform
     });
-  }
+  },
+
+  findFirebaseRecord: task(function *(collectionName, id) {
+    let firebase = this.get('firebase');
+
+    return yield firebase.firestore()
+      .collection(collectionName)
+      .doc(id)
+      .get()
+  })
 });
 
 function isSubscriber() {
+  if (typeof FastBoot !== 'undefined') {
+    return false;
+  }
+
   let fingerprint = this.get('fingerprintjs.fingerprint.result');
-  let firebase = this.get('firebase');
 
   if (isBlank(fingerprint)) {
     return false;
   }
 
-  return ObjectPromiseProxy.create({
-    promise: firebase.firestore()
-      .collection('signups')
-      .doc(fingerprint)
-      .get()
-  });
+  return this.get('findFirebaseRecord')
+    .perform('signups', fingerprint)
+    .exists;
 }
