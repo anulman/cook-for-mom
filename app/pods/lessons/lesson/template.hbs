@@ -30,8 +30,12 @@
       {{section.title}}
 
       {{#section.body tagName='div'}}
-        {{#if section.isLocked}}
-          todo signup form
+        {{#if (and section.raw.isLocked (not lessons.application.didSubmit))}}
+          {{lessons/lesson/signup-form
+            email=lessons.application.email
+            validations=lessons.application.validations
+            onInput=(action (mut lessons.application.email))
+            onSubmit=(action lessons.application.onEmailSubmitted lessons.application lessons.application.email (concat 'lessons/' section.raw.slug))}}
         {{else if section.layoutFetcher.isRunning}}
           <div class='mt-4 pt-4 mb-4 pb-4'>
             {{loading-spinner}}
