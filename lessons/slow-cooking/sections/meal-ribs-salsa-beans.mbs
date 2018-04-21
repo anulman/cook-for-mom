@@ -1,6 +1,7 @@
 ---
 title: "Meal: Braised Short Ribs with Pomegranate Salsa, Kale and Navy Beans"
 slug: meal-ribs-salsa-beans
+isLocked: true
 relationships:
   recipes:
     - id: pomegranate-salsa

@@ -1,6 +1,7 @@
 ---
 title: "Recipe: Beans with Tomatoes and Chillies"
 slug: recipe-beans-tomatoes-chillies
+isLocked: true
 relationships:
   recipes:
     - id: beans-tomatoes-chillies

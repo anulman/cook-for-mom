@@ -1,6 +1,7 @@
 ---
 title: "Recipe: salad and dressing"
 slug: recipe-salad-and-dressing
+isLocked: true
 description: An _easy_, delicious recipe for _salad_ with homemade _dressing_
 imageUrl: /assets/images/lessons/knife-skills/salad-1.jpg
 relationships:

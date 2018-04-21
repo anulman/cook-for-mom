@@ -1,6 +1,7 @@
 ---
 title: "Advanced recipe: ceviche"
 slug: advanced-recipe-ceviche
+isLocked: true
 description: A _simple_ recipe for _ceviche_, a Spanish dish of _cold fish_ "cooked" in _acid_
 imageUrl: /assets/images/lessons/knife-skills/ceviche-5.jpg
 relationships:
