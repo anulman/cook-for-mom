@@ -1,0 +1,260 @@
+<heml>
+  <head>
+    <font href='https://fonts.googleapis.com/css?family=Itim|Lato:300,400|Zilla+Slab:300,400' />
+
+    <style>
+      body, container {
+        background-color: #ECC272;
+        font-family: "Zilla Slab", Georgia, Times, "Times New Roman", serif;
+        font-size: 16px;
+      }
+
+      container {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      strong, em {
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      block {
+        background-color: #F8E9CE;
+        font-weight: 300;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+        font-weight: 400;
+      }
+
+      button {
+        background-color: #717AC1;
+      }
+
+      .footer {
+        text-align: center;
+        color: #BA9C85;
+      }
+
+      .footer a {
+        color: #BA9C85;
+      }
+
+      .header a {
+        text-decoration: none;
+      }
+
+      .header__hero {
+        width: 100%;
+        box-sizing: border-box;
+        background: #B8BEDF;
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: #717AC1;
+        text-align: center;
+      }
+
+      .header__hero h1 {
+        font-family: "Itim", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      block.header__content,
+      block.main__content {
+        padding: 16px 24px;
+      }
+
+      .header__content button {
+        font-size: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+      }
+
+      .header__content p small {
+        color: #BA9C85;
+      }
+
+      .header__content p small a {
+        color: inherit;
+      }
+
+      .header__cta {
+        text-align: center;
+      }
+
+      .header__introduction {
+      }
+
+      .header__table-of-contents,
+      .content__container {
+        background-color: white;
+      }
+
+      .header__table-of-contents h4 {
+        margin-top: 0;
+      }
+
+      .header__table-of-contents ul {
+        margin: 0;
+      }
+
+      .header__table-of-contents li {
+        margin-bottom: 8px;
+        list-style-type: none;
+      }
+
+      .header__table-of-contents a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .header__table-of-contents column {
+        vertical-align: middle !important;
+      }
+
+      .header__table-of-contents--name {
+        padding-left: 16px;
+      }
+
+      .header__opt-out {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .main {
+        margin: 24px 0;
+      }
+
+      block.content__container {
+        padding-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <container>
+      <block class='header'>
+        <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=hero-link&mc_referrer=*|EMAIL|*' target='_blank'>
+          <block class='header__hero'>
+            <h1> Slow-Cooking: a Ribs & Beans Adventure </h1>
+          </block>
+
+          <img class='header__image' src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/e33a0087-7d64-4d82-86cb-021f951bc3e7.jpg' />
+        </a>
+
+        <block class='header__content'>
+          <p>
+            <em>Hello!</em> Welcome to <em>Week 3</em> of Cook For Mom. <em>Thank you</em> very much for following along, <em>especially</em> those of you who've <em>reached out</em>. It's been <em>wonderful</em> to hear about the <em>salads</em> and <em>pan-roasts</em> you've tackled!
+          </p>
+
+          <p>
+            If you've not yet <em>sent us an email</em> or <em>tagged us</em> in an <em>Insta share</em> or <em>tweet</em>, please don't be shy. We're trying to <em>help cooks build confidence</em> as they <em>learn new skills</em> and <em>recipes</em>; our next project is a <em>conversational cooking assistant</em>. We'd love to <em>learn</em> from <em>your experiences</em> as you learn from ours :)
+          </p>
+
+          <p>
+            <em>Thanks again</em> for joining us on this <em>delicious journey</em> of <em>self-improvement</em>. We're so glad to have you with us.
+          </p>
+
+          <block class='header__cta'>
+            <button href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=header-cta&mc_referrer=*|EMAIL|*' target='_blank'>Click here for the full lesson!</button>
+            <p><small>
+              You may be asked for your email again.<br />
+              Don't worry if this happens; we will not sign you up twice.
+            </small></p>
+          </block>
+
+          <block class='header__table-of-contents'>
+            <h4> This week, we will learn... </h4>
+            <ul>
+              <li><row>
+                <column large=1 small=3> <a href=https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-1&mc_referrer=*|EMAIL|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/24e7fadf-71ef-4586-b934-9b8d6a4dbf2f.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-1&mc_referrer=*|EMAIL|*' target='_blank'>The difference between <em>slow</em> and <em>fast</em> cooking, <em>when to use</em> each, and <em>how to choose</em> your approach </column>
+              </row></li>
+              <li><row>
+                <column large=1 small=3> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-2&mc_referrer=*|EMAIL|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/f2a92e60-335e-4d5f-9f84-634bb84cdb37.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-2&mc_referrer=*|EMAIL|*' target='_blank'>A <em>simple</em> approach to <em>cooking beans</em> that will keep your <em>kitchen stocked</em> </column>
+              </row></li>
+              <li><row>
+                <column large=1 small=3> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|campaign_uid|*&utm_content=highlights-3&mc_referrer=*|email|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/4042f97f-5f22-4826-b875-e0d9aaced09e.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-3&mc_referrer=*|EMAIL|*' target='_blank'>How to <em>braise</em> a batch of <em>short ribs</em>, then <em>reheat</em> and eat the results <em>through the week</em> </column>
+              </row></li>
+              <li><row>
+                <column large=1 small=3> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|campaign_uid|*&utm_content=highlights-4&mc_referrer=*|email|*' target='_blank'><img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/4ac28871-64ef-4491-a0a8-3ed0650b6597.png' /></a> </column>
+                <column large=11 small=9 class='header__table-of-contents--name'> <a href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=highlights-4&mc_referrer=*|EMAIL|*' target='_blank'>A <em>simple mental model</em> to make sense of the <em>marketing speak</em> around <em>confusing food labels</em> </column>
+              </row></li>
+            </ul>
+          </block>
+        </block>
+      </block>
+
+      <block class='main'>
+        <block class='main__content content'>
+          <block class='content__container'>
+            <p>
+              <a href='https://cookformom.com/lessons/pan-roasting?utm_source=mailchimp&utm_medium=email&utm_campaign=*|campaign_uid|*&utm_content=highlights-4&mc_referrer=*|email|*' target='_blank'>Last week</a> we learned how to <em>pan-roast</em> meat, which is a <em>fast-cooking</em> method. This week we're going to focus on <em>braising</em>, a <em>slow-cooking</em> method.
+            </p>
+
+            <p>
+              I can already hear you, asking me <em>"why would anyone take longer to cook?"</em> If you can <em>pan-roast</em> a chicken breast in <em>15 minutes</em>, why would you take <em>hours</em> to <em>braise</em> a beef rib? Who even has that amount of time to make dinner? What does "braise" even mean?
+            </p>
+
+            <p>
+              These are <em>great questions</em>. Click below; we'll take the last one first.
+            </p>
+
+            <button href='https://cookformom.com/lessons/slow-cooking?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=contest-cta&mc_referrer=*|EMAIL|*' target='_blank'>Take me to the lesson</button>
+          </block>
+        </block>
+
+        <img src='https://gallery.mailchimp.com/1c246dbd2f86faaafc7ce23bd/images/50f6b820-afdd-40a7-9a04-4393d0a781bc.jpg' />
+      </block>
+
+      <block class='footer'>
+        *|IF:LIST|*
+          <p>
+            <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em><br />
+            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+              You are receiving this email because you signed up for a digital cooking class at <a href='https://cookformom.com?utm_source=mailchimp&utm_medium=email&utm_campaign=*|CAMPAIGN_UID|*&utm_content=footer-link&mc_referrer=*|EMAIL|*' target='_blank'>https://cookformom.com</a>
+            </p>
+            <p>
+              <strong>Our mailing address is:</strong><br />
+              10667994 Canada Inc.<br />
+              PO Box 40024<br />
+              Dupont PO<br />
+              Toronto, Ontario, Canada
+            </p>
+            <!-- *|END:IF|* -->
+          </p>
+        *|ELSE:|*
+          <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+            <p> <em>Copyright &copy; *|CURRENT_YEAR|* *|USER:COMPANY|*, All rights reserved.</em> </p>
+            <p>
+              <strong>Our mailing address is:</strong><br />
+              10667994 Canada Inc.<br />
+              PO Box 40024<br />
+              Dupont PO<br />
+              Toronto, Ontario, Canada
+            </p>
+          <!-- *|END:IF|* -->
+        *|END:IF|*
+
+        <p>
+          <a href="*|UNSUB|*">unsubscribe from this list</a>
+          | <a href="*|UPDATE_PROFILE|*" class="utilityLink">update subscription preferences</a>
+          <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+            | <a href="*|ARCHIVE|*" class="utilityLink">view email in browser</a>
+          <!-- *|END:IF|* -->
+        </p>
+      </block>
+    </container>
+  </body>
+</heml>
