@@ -4,8 +4,9 @@ export default Base.extend({
   type: 'recipes/ingredients',
   attrs: {
     ingredient: 'ingredient',
-    notes: 'notes',
     displayName: 'display-name',
+    amounts: 'amounts',
+    notes: 'notes',
     referenceTarget: 'reference-target'
   },
 
