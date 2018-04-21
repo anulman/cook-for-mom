@@ -1,0 +1,39 @@
+{{#form-signup onSubmit=(action onSubmit) as |form|}}
+  {{#form.header}}
+    This section is <em>reserved</em> for Cook For Mom <em>subscribers</em>.<br />
+    Please <em>sign up</em> for <em>instant access</em>!
+  {{/form.header}}
+
+  {{#form.main class='text-center container col-6'}}
+    <input type='email' class='form-control'
+      tabindex=1
+      placeholder='julias.child@cookformom.com'
+      onfocus={{action (mut isInputFocused) true}}
+      onblur={{action (mut isInputFocused) false}}
+      onkeydown={{action form.keydown}}
+      oninput={{action onInput value='target.value'}}
+      aria-label="Your email"
+      value={{email}}>
+
+    {{#if (and
+      (not validations.isValid)
+      (gt email.length 0)
+      (not isInputFocused)
+    )}}
+      <div class='invalid-feedback d-block'>
+        {{map validations.attrs.email.errors by='message'}}
+      </div>
+    {{/if}}
+
+    <button class='btn bg-primary btn-outline-primary text-white container mt-2' type='button'
+      disabled={{not validations.isValid}}
+      onclick={{action form.submit}}>
+      Sign Up Now
+    </button>
+  {{/form.main}}
+
+  {{#form.footer}}
+    <em>Already</em> signed up? Please fill in your email to <em>reauthenticate</em>.<br />
+    Don't worry; we <em>won't send</em> you <em>duplicate emails</em>!
+  {{/form.footer}}
+{{/form-signup}}
