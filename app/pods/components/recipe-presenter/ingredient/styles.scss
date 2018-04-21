@@ -1,0 +1,13 @@
+& {
+  cursor: pointer;
+}
+
+&.is-struck-out {
+  text-decoration: line-through;
+  font-style: italic;
+  color: $gray-500;
+
+  em, strong {
+    font-style: italic !important;
+  }
+}
