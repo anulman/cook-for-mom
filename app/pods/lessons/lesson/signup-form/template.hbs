@@ -1,10 +1,10 @@
-{{#form-signup onSubmit=(action onSubmit) as |form|}}
+{{#form-signup class=styleNamespace onSubmit=(action onSubmit) as |form|}}
   {{#form.header}}
-    This section is <em>reserved</em> for Cook For Mom <em>subscribers</em>.<br />
+    This section is <em>reserved</em> for Cook For Mom <em>subscribers</em>.<br class='d-none d-md-block' />
     Please <em>sign up</em> for <em>instant access</em>!
   {{/form.header}}
 
-  {{#form.main class='text-center container col-6'}}
+  {{#form.main class='text-center container col-md-6'}}
     <input type='email' class='form-control'
       tabindex=1
       placeholder='julias.child@cookformom.com'
@@ -33,7 +33,7 @@
   {{/form.main}}
 
   {{#form.footer}}
-    <em>Already</em> signed up? Please fill in your email to <em>reauthenticate</em>.<br />
+    <em>Already</em> signed up? Please fill in your email to <em>reauthenticate</em>.<br class='d-none d-md-block' />
     Don't worry; we <em>won't send</em> you <em>duplicate emails</em>!
   {{/form.footer}}
 {{/form-signup}}
