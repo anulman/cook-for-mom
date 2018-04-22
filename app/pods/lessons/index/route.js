@@ -2,6 +2,6 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   redirect() {
-    this.replaceWith('lessons.lesson', 'knife-skills');
+    this.replaceWith('lessons.lesson', 'slow-cooking');
   }
 });
